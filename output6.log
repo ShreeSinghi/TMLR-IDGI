@@ -1,0 +1,1718 @@
+==========================================
+SLURM_CLUSTER_NAME = paramganga
+SLURM_ARRAY_JOB_ID = 
+SLURM_ARRAY_TASK_ID = 
+SLURM_ARRAY_TASK_COUNT = 
+SLURM_ARRAY_TASK_MAX = 
+SLURM_ARRAY_TASK_MIN = 
+SLURM_JOB_ACCOUNT = iitr
+SLURM_JOB_ID = 196551
+SLURM_JOB_NAME = 6script
+SLURM_JOB_NODELIST = gpu005
+SLURM_JOB_USER = nobody
+SLURM_JOB_UID = 38653
+SLURM_JOB_PARTITION = gpu
+SLURM_TASK_PID = 23079
+SLURM_SUBMIT_DIR = /home/shree_s.iitr/MLRC-IDGI
+SLURM_CPUS_ON_NODE = 1
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 23079
+==========================================
+usage: conda [-h] [--no-plugins] [-V] COMMAND ...
+conda: error: argument COMMAND: invalid choice: 'activate' (choose from 'clean', 'compare', 'config', 'create', 'info', 'init', 'install', 'list', 'notices', 'package', 'remove', 'uninstall', 'rename', 'run', 'search', 'update', 'upgrade', 'build', 'content-trust', 'convert', 'debug', 'develop', 'doctor', 'index', 'inspect', 'metapackage', 'render', 'skeleton', 'server', 'repo', 'verify', 'env', 'token', 'pack')
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 157.75790786743164
+Used CPU Memory: 14.856353759765625
+Free CPU Memory: 156.91107940673828
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+  0%|          | 0/1000 [00:00<?, ?it/s]  0%|          | 1/1000 [01:19<22:07:29, 79.73s/it]  0%|          | 2/1000 [02:31<20:45:11, 74.86s/it]  0%|          | 3/1000 [03:32<19:02:30, 68.76s/it]  0%|          | 4/1000 [04:28<17:34:22, 63.52s/it]  0%|          | 5/1000 [05:32<17:38:02, 63.80s/it]  1%|          | 6/1000 [06:32<17:15:06, 62.48s/it]  1%|          | 7/1000 [07:35<17:16:37, 62.64s/it]  1%|          | 8/1000 [08:32<16:45:39, 60.83s/it]  1%|          | 9/1000 [09:36<17:03:14, 61.95s/it]  1%|          | 10/1000 [10:51<18:09:46, 66.05s/it]  1%|          | 11/1000 [11:59<18:15:32, 66.46s/it]  1%|          | 12/1000 [13:12<18:49:40, 68.60s/it]  1%|▏         | 13/1000 [14:26<19:12:53, 70.08s/it]  1%|▏         | 14/1000 [15:41<19:36:03, 71.57s/it]  2%|▏         | 15/1000 [16:53<19:37:12, 71.71s/it]  2%|▏         | 16/1000 [18:02<19:22:17, 70.87s/it]  2%|▏         | 17/1000 [19:06<18:49:51, 68.96s/it]  2%|▏         | 18/1000 [20:17<18:56:37, 69.45s/it]  2%|▏         | 19/1000 [21:26<18:52:58, 69.30s/it]  2%|▏         | 20/1000 [22:39<19:12:01, 70.53s/it]  2%|▏         | 21/1000 [23:45<18:48:43, 69.18s/it]  2%|▏         | 22/1000 [24:44<17:55:07, 65.96s/it]  2%|▏         | 23/1000 [25:57<18:30:28, 68.20s/it]  2%|▏         | 24/1000 [27:08<18:40:28, 68.88s/it]  2%|▎         | 25/1000 [28:20<18:54:59, 69.85s/it]  3%|▎         | 26/1000 [29:32<19:04:19, 70.49s/it]  3%|▎         | 27/1000 [30:16<16:58:00, 62.77s/it]  3%|▎         | 28/1000 [31:15<16:36:02, 61.48s/it]  3%|▎         | 29/1000 [32:19<16:49:50, 62.40s/it]  3%|▎         | 30/1000 [33:28<17:20:27, 64.36s/it]  3%|▎         | 31/1000 [34:31<17:12:33, 63.94s/it]  3%|▎         | 32/1000 [35:37<17:21:21, 64.55s/it]  3%|▎         | 33/1000 [36:16<15:13:58, 56.71s/it]  3%|▎         | 34/1000 [37:19<15:42:55, 58.57s/it]  4%|▎         | 35/1000 [38:05<14:41:47, 54.83s/it]  4%|▎         | 36/1000 [38:54<14:13:59, 53.15s/it]  4%|▎         | 37/1000 [39:35<13:15:57, 49.59s/it]  4%|▍         | 38/1000 [40:38<14:19:16, 53.59s/it]  4%|▍         | 39/1000 [41:41<15:03:05, 56.38s/it]  4%|▍         | 40/1000 [42:40<15:12:26, 57.03s/it]  4%|▍         | 41/1000 [43:34<14:57:07, 56.13s/it]  4%|▍         | 42/1000 [44:40<15:43:10, 59.07s/it]  4%|▍         | 43/1000 [45:40<15:46:59, 59.37s/it]  4%|▍         | 44/1000 [46:49<16:31:20, 62.22s/it]  4%|▍         | 45/1000 [47:31<14:57:19, 56.38s/it]  5%|▍         | 46/1000 [48:27<14:51:46, 56.09s/it]  5%|▍         | 47/1000 [49:01<13:06:34, 49.52s/it]  5%|▍         | 48/1000 [50:05<14:17:03, 54.02s/it]  5%|▍         | 49/1000 [51:13<15:20:12, 58.06s/it]  5%|▌         | 50/1000 [52:11<15:21:21, 58.19s/it]  5%|▌         | 51/1000 [53:17<15:57:24, 60.53s/it]  5%|▌         | 52/1000 [54:28<16:43:21, 63.50s/it]  5%|▌         | 53/1000 [55:31<16:39:32, 63.33s/it]  5%|▌         | 54/1000 [56:38<16:57:49, 64.56s/it]  6%|▌         | 55/1000 [57:31<16:00:18, 60.97s/it]  6%|▌         | 56/1000 [58:15<14:42:01, 56.06s/it]  6%|▌         | 57/1000 [59:20<15:21:07, 58.61s/it]  6%|▌         | 58/1000 [1:00:32<16:23:06, 62.62s/it]  6%|▌         | 59/1000 [1:01:24<15:34:30, 59.59s/it]  6%|▌         | 60/1000 [1:02:17<14:59:56, 57.44s/it]  6%|▌         | 61/1000 [1:02:47<12:50:50, 49.26s/it]  6%|▌         | 62/1000 [1:03:49<13:47:30, 52.93s/it]  6%|▋         | 63/1000 [1:04:27<12:38:15, 48.55s/it]  6%|▋         | 64/1000 [1:05:29<13:39:00, 52.50s/it]  6%|▋         | 65/1000 [1:06:16<13:15:10, 51.03s/it]  7%|▋         | 66/1000 [1:07:16<13:56:15, 53.72s/it]  7%|▋         | 67/1000 [1:08:04<13:26:45, 51.88s/it]  7%|▋         | 68/1000 [1:08:56<13:29:02, 52.08s/it]  7%|▋         | 69/1000 [1:09:29<11:59:57, 46.40s/it]  7%|▋         | 70/1000 [1:10:43<14:04:23, 54.48s/it]  7%|▋         | 71/1000 [1:11:50<15:03:46, 58.37s/it]  7%|▋         | 72/1000 [1:13:01<15:59:23, 62.03s/it]  7%|▋         | 73/1000 [1:14:04<16:02:28, 62.30s/it]  7%|▋         | 74/1000 [1:14:35<13:39:36, 53.11s/it]  8%|▊         | 75/1000 [1:15:23<13:12:57, 51.44s/it]  8%|▊         | 76/1000 [1:16:29<14:19:05, 55.79s/it]  8%|▊         | 77/1000 [1:17:41<15:32:42, 60.63s/it]  8%|▊         | 78/1000 [1:18:27<14:25:49, 56.34s/it]  8%|▊         | 79/1000 [1:19:27<14:40:55, 57.39s/it]  8%|▊         | 80/1000 [1:20:32<15:13:07, 59.55s/it]  8%|▊         | 81/1000 [1:21:40<15:54:46, 62.34s/it]  8%|▊         | 82/1000 [1:22:45<16:04:00, 63.01s/it]  8%|▊         | 83/1000 [1:23:51<16:16:45, 63.91s/it]  8%|▊         | 84/1000 [1:25:00<16:38:39, 65.41s/it]  8%|▊         | 85/1000 [1:26:10<17:01:02, 66.95s/it]  9%|▊         | 86/1000 [1:27:18<17:02:18, 67.11s/it]  9%|▊         | 87/1000 [1:28:15<16:14:58, 64.07s/it]  9%|▉         | 88/1000 [1:29:25<16:43:06, 65.99s/it]  9%|▉         | 89/1000 [1:30:36<17:03:00, 67.38s/it]  9%|▉         | 90/1000 [1:31:48<17:22:45, 68.75s/it]  9%|▉         | 91/1000 [1:33:01<17:43:10, 70.18s/it]  9%|▉         | 92/1000 [1:34:12<17:43:35, 70.28s/it]  9%|▉         | 93/1000 [1:35:25<17:56:44, 71.23s/it]  9%|▉         | 94/1000 [1:36:37<17:58:37, 71.43s/it] 10%|▉         | 95/1000 [1:37:48<17:52:54, 71.13s/it] 10%|▉         | 96/1000 [1:38:57<17:41:28, 70.45s/it] 10%|▉         | 97/1000 [1:40:06<17:33:20, 69.99s/it] 10%|▉         | 98/1000 [1:41:13<17:21:02, 69.25s/it] 10%|▉         | 99/1000 [1:42:25<17:32:14, 70.07s/it] 10%|█         | 100/1000 [1:43:28<16:59:16, 67.95s/it] 10%|█         | 101/1000 [1:44:42<17:23:02, 69.61s/it] 10%|█         | 102/1000 [1:45:28<15:36:15, 62.56s/it] 10%|█         | 103/1000 [1:46:42<16:30:26, 66.25s/it] 10%|█         | 104/1000 [1:47:46<16:15:12, 65.30s/it] 10%|█         | 105/1000 [1:48:55<16:30:38, 66.41s/it] 11%|█         | 106/1000 [1:50:04<16:40:42, 67.16s/it] 11%|█         | 107/1000 [1:51:07<16:21:04, 65.92s/it] 11%|█         | 108/1000 [1:52:12<16:20:05, 65.93s/it] 11%|█         | 109/1000 [1:53:05<15:18:49, 61.87s/it] 11%|█         | 110/1000 [1:54:11<15:35:59, 63.10s/it] 11%|█         | 111/1000 [1:55:08<15:07:46, 61.27s/it] 11%|█         | 112/1000 [1:56:14<15:27:25, 62.66s/it] 11%|█▏        | 113/1000 [1:57:11<15:01:02, 60.95s/it] 11%|█▏        | 114/1000 [1:58:18<15:28:27, 62.88s/it] 12%|█▏        | 115/1000 [1:59:18<15:14:25, 62.00s/it] 12%|█▏        | 116/1000 [2:00:25<15:37:10, 63.61s/it] 12%|█▏        | 117/1000 [2:01:33<15:53:04, 64.76s/it] 12%|█▏        | 118/1000 [2:02:40<16:04:22, 65.60s/it] 12%|█▏        | 119/1000 [2:03:39<15:32:04, 63.48s/it] 12%|█▏        | 120/1000 [2:04:33<14:49:15, 60.63s/it] 12%|█▏        | 121/1000 [2:05:29<14:26:26, 59.14s/it] 12%|█▏        | 122/1000 [2:06:30<14:35:33, 59.83s/it] 12%|█▏        | 123/1000 [2:07:34<14:50:41, 60.94s/it] 12%|█▏        | 124/1000 [2:08:37<14:59:01, 61.58s/it] 12%|█▎        | 125/1000 [2:09:24<13:56:42, 57.37s/it] 13%|█▎        | 126/1000 [2:10:35<14:53:40, 61.35s/it] 13%|█▎        | 127/1000 [2:11:33<14:40:05, 60.49s/it] 13%|█▎        | 128/1000 [2:12:42<15:15:27, 62.99s/it] 13%|█▎        | 129/1000 [2:13:45<15:14:18, 62.98s/it] 13%|█▎        | 130/1000 [2:15:00<16:05:02, 66.55s/it] 13%|█▎        | 131/1000 [2:16:15<16:40:31, 69.08s/it] 13%|█▎        | 132/1000 [2:17:21<16:25:55, 68.15s/it] 13%|█▎        | 133/1000 [2:18:31<16:34:44, 68.84s/it] 13%|█▎        | 134/1000 [2:19:42<16:40:41, 69.33s/it] 14%|█▎        | 135/1000 [2:20:39<15:45:55, 65.61s/it] 14%|█▎        | 136/1000 [2:21:52<16:19:20, 68.01s/it] 14%|█▎        | 137/1000 [2:23:04<16:34:50, 69.17s/it] 14%|█▍        | 138/1000 [2:24:16<16:45:16, 69.97s/it] 14%|█▍        | 139/1000 [2:25:27<16:46:12, 70.12s/it] 14%|█▍        | 140/1000 [2:26:40<16:58:45, 71.08s/it] 14%|█▍        | 141/1000 [2:27:46<16:35:37, 69.54s/it] 14%|█▍        | 142/1000 [2:28:55<16:31:45, 69.35s/it] 14%|█▍        | 143/1000 [2:30:02<16:22:02, 68.75s/it] 14%|█▍        | 144/1000 [2:31:10<16:15:06, 68.35s/it] 14%|█▍        | 145/1000 [2:32:21<16:28:51, 69.39s/it] 15%|█▍        | 146/1000 [2:33:33<16:38:10, 70.13s/it] 15%|█▍        | 147/1000 [2:34:44<16:38:44, 70.25s/it] 15%|█▍        | 148/1000 [2:35:53<16:31:26, 69.82s/it] 15%|█▍        | 149/1000 [2:37:04<16:38:46, 70.42s/it] 15%|█▌        | 150/1000 [2:38:12<16:24:34, 69.50s/it] 15%|█▌        | 151/1000 [2:39:13<15:49:00, 67.07s/it] 15%|█▌        | 152/1000 [2:40:02<14:31:39, 61.67s/it] 15%|█▌        | 153/1000 [2:41:05<14:36:45, 62.11s/it] 15%|█▌        | 154/1000 [2:42:05<14:26:05, 61.43s/it] 16%|█▌        | 155/1000 [2:43:10<14:38:03, 62.35s/it] 16%|█▌        | 156/1000 [2:44:04<14:01:32, 59.83s/it] 16%|█▌        | 157/1000 [2:45:15<14:51:03, 63.42s/it] 16%|█▌        | 158/1000 [2:46:26<15:19:16, 65.51s/it] 16%|█▌        | 159/1000 [2:47:10<13:50:04, 59.22s/it] 16%|█▌        | 160/1000 [2:48:12<13:58:12, 59.87s/it] 16%|█▌        | 161/1000 [2:49:21<14:34:37, 62.55s/it] 16%|█▌        | 162/1000 [2:50:19<14:16:16, 61.31s/it] 16%|█▋        | 163/1000 [2:51:19<14:09:26, 60.89s/it] 16%|█▋        | 164/1000 [2:51:59<12:40:43, 54.60s/it] 16%|█▋        | 165/1000 [2:53:06<13:33:06, 58.43s/it] 17%|█▋        | 166/1000 [2:53:58<13:06:01, 56.55s/it] 17%|█▋        | 167/1000 [2:54:43<12:15:23, 52.97s/it] 17%|█▋        | 168/1000 [2:55:08<10:17:48, 44.55s/it] 17%|█▋        | 169/1000 [2:56:00<10:47:43, 46.77s/it] 17%|█▋        | 170/1000 [2:57:13<12:37:12, 54.74s/it] 17%|█▋        | 171/1000 [2:58:01<12:06:54, 52.61s/it] 17%|█▋        | 172/1000 [2:59:04<12:49:03, 55.73s/it] 17%|█▋        | 173/1000 [3:00:08<13:24:29, 58.37s/it] 17%|█▋        | 174/1000 [3:00:57<12:45:01, 55.57s/it] 18%|█▊        | 175/1000 [3:02:06<13:38:43, 59.54s/it] 18%|█▊        | 176/1000 [3:03:03<13:27:52, 58.83s/it] 18%|█▊        | 177/1000 [3:04:03<13:31:23, 59.15s/it] 18%|█▊        | 178/1000 [3:05:12<14:10:17, 62.06s/it] 18%|█▊        | 179/1000 [3:06:19<14:31:00, 63.65s/it] 18%|█▊        | 180/1000 [3:07:16<14:02:37, 61.66s/it] 18%|█▊        | 181/1000 [3:08:07<13:16:19, 58.34s/it] 18%|█▊        | 182/1000 [3:09:16<13:58:47, 61.53s/it] 18%|█▊        | 183/1000 [3:10:23<14:21:40, 63.28s/it] 18%|█▊        | 184/1000 [3:11:26<14:19:14, 63.18s/it] 18%|█▊        | 185/1000 [3:12:23<13:52:49, 61.31s/it] 19%|█▊        | 186/1000 [3:13:19<13:27:35, 59.53s/it] 19%|█▊        | 187/1000 [3:14:14<13:09:39, 58.28s/it] 19%|█▉        | 188/1000 [3:15:10<12:57:46, 57.47s/it] 19%|█▉        | 189/1000 [3:16:08<13:01:56, 57.85s/it] 19%|█▉        | 190/1000 [3:17:05<12:57:12, 57.57s/it] 19%|█▉        | 191/1000 [3:18:10<13:25:20, 59.73s/it] 19%|█▉        | 192/1000 [3:19:11<13:31:08, 60.23s/it] 19%|█▉        | 193/1000 [3:20:10<13:23:07, 59.71s/it] 19%|█▉        | 194/1000 [3:20:47<11:51:35, 52.97s/it] 20%|█▉        | 195/1000 [3:21:53<12:43:00, 56.87s/it] 20%|█▉        | 196/1000 [3:23:00<13:24:16, 60.02s/it] 20%|█▉        | 197/1000 [3:23:54<12:58:55, 58.20s/it] 20%|█▉        | 198/1000 [3:24:53<12:59:16, 58.30s/it] 20%|█▉        | 199/1000 [3:26:00<13:34:28, 61.01s/it] 20%|██        | 200/1000 [3:27:03<13:41:18, 61.60s/it] 20%|██        | 201/1000 [3:28:03<13:33:36, 61.10s/it] 20%|██        | 202/1000 [3:28:54<12:50:33, 57.94s/it] 20%|██        | 203/1000 [3:29:51<12:45:31, 57.63s/it] 20%|██        | 204/1000 [3:30:58<13:23:13, 60.54s/it] 20%|██        | 205/1000 [3:31:53<13:01:43, 59.00s/it] 21%|██        | 206/1000 [3:32:55<13:10:19, 59.72s/it] 21%|██        | 207/1000 [3:33:55<13:09:46, 59.76s/it] 21%|██        | 208/1000 [3:35:05<13:50:58, 62.95s/it] 21%|██        | 209/1000 [3:36:11<14:01:44, 63.85s/it] 21%|██        | 210/1000 [3:37:17<14:08:57, 64.48s/it] 21%|██        | 211/1000 [3:38:22<14:08:40, 64.54s/it] 21%|██        | 212/1000 [3:39:28<14:12:58, 64.95s/it] 21%|██▏       | 213/1000 [3:40:26<13:46:44, 63.03s/it] 21%|██▏       | 214/1000 [3:41:31<13:51:56, 63.51s/it] 22%|██▏       | 215/1000 [3:42:34<13:48:53, 63.35s/it] 22%|██▏       | 216/1000 [3:43:41<14:03:42, 64.57s/it] 22%|██▏       | 217/1000 [3:44:48<14:13:38, 65.41s/it] 22%|██▏       | 218/1000 [3:46:00<14:37:16, 67.31s/it] 22%|██▏       | 219/1000 [3:47:09<14:42:16, 67.78s/it] 22%|██▏       | 220/1000 [3:48:10<14:16:04, 65.85s/it] 22%|██▏       | 221/1000 [3:49:06<13:34:09, 62.71s/it] 22%|██▏       | 222/1000 [3:50:13<13:51:12, 64.10s/it] 22%|██▏       | 223/1000 [3:51:13<13:33:46, 62.84s/it] 22%|██▏       | 224/1000 [3:52:16<13:32:52, 62.85s/it] 22%|██▎       | 225/1000 [3:53:14<13:14:47, 61.53s/it] 23%|██▎       | 226/1000 [3:54:23<13:41:45, 63.70s/it] 23%|██▎       | 227/1000 [3:55:04<12:13:42, 56.95s/it] 23%|██▎       | 228/1000 [3:56:00<12:06:39, 56.48s/it] 23%|██▎       | 229/1000 [3:57:09<12:53:54, 60.23s/it] 23%|██▎       | 230/1000 [3:58:19<13:31:38, 63.24s/it] 23%|██▎       | 231/1000 [3:59:16<13:06:16, 61.35s/it] 23%|██▎       | 232/1000 [4:00:05<12:18:01, 57.66s/it] 23%|██▎       | 233/1000 [4:01:05<12:25:44, 58.34s/it] 23%|██▎       | 234/1000 [4:02:08<12:42:40, 59.74s/it] 24%|██▎       | 235/1000 [4:03:17<13:16:13, 62.45s/it] 24%|██▎       | 236/1000 [4:04:21<13:23:06, 63.07s/it] 24%|██▎       | 237/1000 [4:05:21<13:10:03, 62.13s/it] 24%|██▍       | 238/1000 [4:06:21<13:00:36, 61.46s/it] 24%|██▍       | 239/1000 [4:07:18<12:42:48, 60.14s/it] 24%|██▍       | 239/1000 [4:08:30<13:11:15, 62.39s/it]
+Processing classes 0 to 1
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 156.65746688842773
+Used CPU Memory: 15.886375427246094
+Free CPU Memory: 155.14425659179688
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 1 to 2
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 149.98632431030273
+Used CPU Memory: 22.557052612304688
+Free CPU Memory: 148.24534606933594
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 2 to 3
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 150.14748001098633
+Used CPU Memory: 22.395370483398438
+Free CPU Memory: 148.20768356323242
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 3 to 4
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 149.93532943725586
+Used CPU Memory: 22.606830596923828
+Free CPU Memory: 147.81604385375977
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 4 to 5
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 150.09754180908203
+Used CPU Memory: 22.44414520263672
+Free CPU Memory: 147.7693977355957
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 5 to 6
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 150.07251358032227
+Used CPU Memory: 22.46834945678711
+Free CPU Memory: 147.55001068115234
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 6 to 7
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 150.04718780517578
+Used CPU Memory: 22.492950439453125
+Free CPU Memory: 147.32079315185547
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 7 to 8
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 150.01968383789062
+Used CPU Memory: 22.520450592041016
+Free CPU Memory: 147.10895538330078
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 8 to 9
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 150.01568222045898
+Used CPU Memory: 22.52212142944336
+Free CPU Memory: 146.19593048095703
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 9 to 10
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 149.2190818786621
+Used CPU Memory: 23.318233489990234
+Free CPU Memory: 145.15692138671875
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 10 to 11
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 149.19052124023438
+Used CPU Memory: 23.345733642578125
+Free CPU Memory: 144.9100799560547
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 11 to 12
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 149.05069732666016
+Used CPU Memory: 23.485233306884766
+Free CPU Memory: 144.5323715209961
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 12 to 13
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 148.93994140625
+Used CPU Memory: 23.593395233154297
+Free CPU Memory: 144.18572998046875
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 13 to 14
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 148.76311874389648
+Used CPU Memory: 23.771812438964844
+Free CPU Memory: 143.76428604125977
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 14 to 15
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 148.6201057434082
+Used CPU Memory: 23.912738800048828
+Free CPU Memory: 142.66065979003906
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 15 to 16
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 148.59293365478516
+Used CPU Memory: 23.93886947631836
+Free CPU Memory: 142.41028213500977
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 16 to 17
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 148.3949737548828
+Used CPU Memory: 24.136276245117188
+Free CPU Memory: 142.0036964416504
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 17 to 18
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 148.53805923461914
+Used CPU Memory: 23.99289321899414
+Free CPU Memory: 141.91859817504883
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 18 to 19
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 148.33457946777344
+Used CPU Memory: 24.195579528808594
+Free CPU Memory: 141.49191284179688
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 19 to 20
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 148.4773292541504
+Used CPU Memory: 24.052391052246094
+Free CPU Memory: 141.39652633666992
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 20 to 21
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 148.27816772460938
+Used CPU Memory: 24.251026153564453
+Free CPU Memory: 140.98382186889648
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 21 to 22
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.996337890625
+Used CPU Memory: 24.529808044433594
+Free CPU Memory: 139.63277053833008
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 22 to 23
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.7541618347168
+Used CPU Memory: 24.77170181274414
+Free CPU Memory: 139.15255737304688
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 23 to 24
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.72457122802734
+Used CPU Memory: 24.800949096679688
+Free CPU Memory: 138.89493560791016
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 24 to 25
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.48430633544922
+Used CPU Memory: 25.040882110595703
+Free CPU Memory: 138.4217071533203
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 25 to 26
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.66570663452148
+Used CPU Memory: 24.858901977539062
+Free CPU Memory: 138.37014770507812
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 26 to 27
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.43604278564453
+Used CPU Memory: 25.08783721923828
+Free CPU Memory: 137.9948272705078
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 27 to 28
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.62262344360352
+Used CPU Memory: 24.90035629272461
+Free CPU Memory: 137.99237823486328
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 28 to 29
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.59628677368164
+Used CPU Memory: 24.92645263671875
+Free CPU Memory: 137.75727081298828
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 29 to 30
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.56649017333984
+Used CPU Memory: 24.955707550048828
+Free CPU Memory: 137.5041618347168
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 30 to 31
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.2695426940918
+Used CPU Memory: 25.251861572265625
+Free CPU Memory: 137.00345611572266
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 31 to 32
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.9877471923828
+Used CPU Memory: 24.531932830810547
+Free CPU Memory: 136.7954559326172
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 32 to 33
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.7438201904297
+Used CPU Memory: 24.77518081665039
+Free CPU Memory: 136.42528915405273
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 33 to 34
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.94499969482422
+Used CPU Memory: 24.5733642578125
+Free CPU Memory: 136.42271041870117
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 34 to 35
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.74004364013672
+Used CPU Memory: 24.778579711914062
+Free CPU Memory: 136.06707000732422
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 35 to 36
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.85306549072266
+Used CPU Memory: 24.664936065673828
+Free CPU Memory: 136.01989364624023
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 36 to 37
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.72505569458008
+Used CPU Memory: 24.792526245117188
+Free CPU Memory: 135.75586700439453
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 37 to 38
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.86180114746094
+Used CPU Memory: 24.655323028564453
+Free CPU Memory: 135.68867111206055
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 38 to 39
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.80733108520508
+Used CPU Memory: 24.70691680908203
+Free CPU Memory: 135.43276596069336
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 39 to 40
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.3091926574707
+Used CPU Memory: 25.204669952392578
+Free CPU Memory: 133.97604370117188
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 40 to 41
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.31418228149414
+Used CPU Memory: 25.19970703125
+Free CPU Memory: 133.8059196472168
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 41 to 42
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.4668960571289
+Used CPU Memory: 25.046524047851562
+Free CPU Memory: 133.74537658691406
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 42 to 43
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.44129943847656
+Used CPU Memory: 25.071380615234375
+Free CPU Memory: 133.5257453918457
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 43 to 44
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.41223907470703
+Used CPU Memory: 25.09992218017578
+Free CPU Memory: 133.2732810974121
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 44 to 45
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.21240234375
+Used CPU Memory: 25.29928207397461
+Free CPU Memory: 132.9326171875
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 45 to 46
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.19012069702148
+Used CPU Memory: 25.32117462158203
+Free CPU Memory: 132.7310562133789
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 46 to 47
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.35789108276367
+Used CPU Memory: 25.15301513671875
+Free CPU Memory: 132.78705215454102
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 47 to 48
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.3326644897461
+Used CPU Memory: 25.177871704101562
+Free CPU Memory: 132.55313873291016
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 48 to 49
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.30217361450195
+Used CPU Memory: 25.207584381103516
+Free CPU Memory: 132.30421447753906
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 49 to 50
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.2199363708496
+Used CPU Memory: 25.28750228881836
+Free CPU Memory: 131.28289413452148
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 50 to 51
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.19224166870117
+Used CPU Memory: 25.315189361572266
+Free CPU Memory: 131.0415496826172
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 51 to 52
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.1626319885254
+Used CPU Memory: 25.344249725341797
+Free CPU Memory: 130.78376007080078
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 52 to 53
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.1363639831543
+Used CPU Memory: 25.369503021240234
+Free CPU Memory: 130.5537872314453
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 53 to 54
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.93151092529297
+Used CPU Memory: 25.573829650878906
+Free CPU Memory: 130.13046264648438
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 54 to 55
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.0868034362793
+Used CPU Memory: 25.41851043701172
+Free CPU Memory: 130.11613082885742
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 55 to 56
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.8935203552246
+Used CPU Memory: 25.61139678955078
+Free CPU Memory: 129.77689361572266
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 56 to 57
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.04169082641602
+Used CPU Memory: 25.462543487548828
+Free CPU Memory: 129.7165184020996
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 57 to 58
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.9368667602539
+Used CPU Memory: 25.565425872802734
+Free CPU Memory: 128.63823318481445
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 58 to 59
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.91505813598633
+Used CPU Memory: 25.58647918701172
+Free CPU Memory: 128.44686126708984
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 59 to 60
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.89350128173828
+Used CPU Memory: 25.607898712158203
+Free CPU Memory: 128.2551612854004
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 60 to 61
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.70781707763672
+Used CPU Memory: 25.793262481689453
+Free CPU Memory: 127.97201919555664
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 61 to 62
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.5469093322754
+Used CPU Memory: 25.954490661621094
+Free CPU Memory: 127.61165618896484
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 62 to 63
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.84236526489258
+Used CPU Memory: 25.658706665039062
+Free CPU Memory: 127.78042221069336
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 63 to 64
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.92949295043945
+Used CPU Memory: 25.571395874023438
+Free CPU Memory: 128.60272598266602
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 64 to 65
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.5954475402832
+Used CPU Memory: 25.905628204345703
+Free CPU Memory: 128.11210250854492
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 65 to 66
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.92129135131836
+Used CPU Memory: 25.57979965209961
+Free CPU Memory: 128.49900817871094
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 66 to 67
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 148.58416366577148
+Used CPU Memory: 23.91687774658203
+Free CPU Memory: 130.2597427368164
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 67 to 68
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.854248046875
+Used CPU Memory: 25.647029876708984
+Free CPU Memory: 128.11167526245117
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 68 to 69
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.86584854125977
+Used CPU Memory: 25.633663177490234
+Free CPU Memory: 128.21387481689453
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 69 to 70
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.7049102783203
+Used CPU Memory: 25.796871185302734
+Free CPU Memory: 128.21209335327148
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 70 to 71
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.87184524536133
+Used CPU Memory: 25.630268096923828
+Free CPU Memory: 128.28551864624023
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 71 to 72
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.6005516052246
+Used CPU Memory: 25.90163803100586
+Free CPU Memory: 127.96945571899414
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 72 to 73
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.78400802612305
+Used CPU Memory: 25.71811294555664
+Free CPU Memory: 128.5489387512207
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 73 to 74
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.93671798706055
+Used CPU Memory: 25.56625747680664
+Free CPU Memory: 128.86442184448242
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 74 to 75
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.92891311645508
+Used CPU Memory: 25.574054718017578
+Free CPU Memory: 128.78207397460938
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 75 to 76
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.92544555664062
+Used CPU Memory: 25.577713012695312
+Free CPU Memory: 128.75605392456055
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 76 to 77
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.64661407470703
+Used CPU Memory: 25.855098724365234
+Free CPU Memory: 127.98309326171875
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 77 to 78
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.65974807739258
+Used CPU Memory: 25.842121124267578
+Free CPU Memory: 128.10531616210938
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 78 to 79
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.81798553466797
+Used CPU Memory: 25.683425903320312
+Free CPU Memory: 128.07794570922852
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 79 to 80
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.79347229003906
+Used CPU Memory: 25.70772933959961
+Free CPU Memory: 127.84495162963867
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 80 to 81
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.85108184814453
+Used CPU Memory: 25.65072250366211
+Free CPU Memory: 128.39001083374023
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 81 to 82
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.84990692138672
+Used CPU Memory: 25.65210723876953
+Free CPU Memory: 128.37885284423828
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 82 to 83
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.84638214111328
+Used CPU Memory: 25.655921936035156
+Free CPU Memory: 128.34637069702148
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 83 to 84
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.67987060546875
+Used CPU Memory: 25.822399139404297
+Free CPU Memory: 128.25587463378906
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 84 to 85
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.33213806152344
+Used CPU Memory: 26.168880462646484
+Free CPU Memory: 126.88412094116211
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 85 to 86
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.63103485107422
+Used CPU Memory: 25.869800567626953
+Free CPU Memory: 128.03382110595703
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 86 to 87
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.6244125366211
+Used CPU Memory: 25.877120971679688
+Free CPU Memory: 127.97155380249023
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 87 to 88
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.59777450561523
+Used CPU Memory: 25.903785705566406
+Free CPU Memory: 127.71712493896484
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 88 to 89
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.6954460144043
+Used CPU Memory: 25.806976318359375
+Free CPU Memory: 128.6111068725586
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 89 to 90
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.4695816040039
+Used CPU Memory: 26.033260345458984
+Free CPU Memory: 128.25149536132812
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 90 to 91
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.66541290283203
+Used CPU Memory: 25.836936950683594
+Free CPU Memory: 128.33885955810547
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 91 to 92
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.47408294677734
+Used CPU Memory: 26.028549194335938
+Free CPU Memory: 128.23775100708008
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 92 to 93
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.13035202026367
+Used CPU Memory: 26.3707275390625
+Free CPU Memory: 127.40661239624023
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 93 to 94
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.35708236694336
+Used CPU Memory: 26.14470672607422
+Free CPU Memory: 127.73396682739258
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 94 to 95
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.01486587524414
+Used CPU Memory: 26.486698150634766
+Free CPU Memory: 127.2519302368164
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 95 to 96
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.30904388427734
+Used CPU Memory: 26.192325592041016
+Free CPU Memory: 127.61941146850586
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 96 to 97
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.38948440551758
+Used CPU Memory: 26.11233901977539
+Free CPU Memory: 128.02925491333008
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 97 to 98
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.37733459472656
+Used CPU Memory: 26.124305725097656
+Free CPU Memory: 127.92369842529297
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 98 to 99
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.1654052734375
+Used CPU Memory: 26.336368560791016
+Free CPU Memory: 127.71693420410156
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 99 to 100
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.15369033813477
+Used CPU Memory: 26.34770965576172
+Free CPU Memory: 127.62358093261719
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 100 to 101
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.3855323791504
+Used CPU Memory: 26.116256713867188
+Free CPU Memory: 127.98265075683594
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 101 to 102
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.78532791137695
+Used CPU Memory: 25.715492248535156
+Free CPU Memory: 127.47854995727539
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 102 to 103
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.63058471679688
+Used CPU Memory: 25.870014190673828
+Free CPU Memory: 127.99023818969727
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 103 to 104
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.88467407226562
+Used CPU Memory: 25.61679458618164
+Free CPU Memory: 128.62469100952148
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 104 to 105
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.88306045532227
+Used CPU Memory: 25.6190185546875
+Free CPU Memory: 128.59613800048828
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 105 to 106
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.86540985107422
+Used CPU Memory: 25.63641357421875
+Free CPU Memory: 128.41867446899414
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 106 to 107
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.68982315063477
+Used CPU Memory: 25.811527252197266
+Free CPU Memory: 128.24269104003906
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 107 to 108
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.68506240844727
+Used CPU Memory: 25.816722869873047
+Free CPU Memory: 128.20722198486328
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 108 to 109
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.86026000976562
+Used CPU Memory: 25.641422271728516
+Free CPU Memory: 128.3890495300293
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 109 to 110
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 145.9290771484375
+Used CPU Memory: 26.57140350341797
+Free CPU Memory: 127.39628601074219
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 110 to 111
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 145.8308982849121
+Used CPU Memory: 26.66958999633789
+Free CPU Memory: 127.2126579284668
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 111 to 112
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.17203521728516
+Used CPU Memory: 26.327388763427734
+Free CPU Memory: 127.49149322509766
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 112 to 113
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.26934432983398
+Used CPU Memory: 26.233051300048828
+Free CPU Memory: 128.36231994628906
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 113 to 114
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 145.95465469360352
+Used CPU Memory: 26.54738998413086
+Free CPU Memory: 127.85311889648438
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 114 to 115
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 145.8480110168457
+Used CPU Memory: 26.65436553955078
+Free CPU Memory: 127.74295806884766
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 115 to 116
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.25320053100586
+Used CPU Memory: 26.24897003173828
+Free CPU Memory: 128.18206787109375
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 116 to 117
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.23363876342773
+Used CPU Memory: 26.268421173095703
+Free CPU Memory: 128.01092147827148
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 117 to 118
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 145.94567489624023
+Used CPU Memory: 26.55640411376953
+Free CPU Memory: 127.75303268432617
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 118 to 119
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.2509651184082
+Used CPU Memory: 26.251075744628906
+Free CPU Memory: 128.17761611938477
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 119 to 120
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.45000839233398
+Used CPU Memory: 26.050678253173828
+Free CPU Memory: 127.76163482666016
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 120 to 121
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.29812240600586
+Used CPU Memory: 26.20325469970703
+Free CPU Memory: 128.03838348388672
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 121 to 122
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.4925994873047
+Used CPU Memory: 26.009193420410156
+Free CPU Memory: 128.16320419311523
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 122 to 123
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.4878807067871
+Used CPU Memory: 26.013629913330078
+Free CPU Memory: 128.11279678344727
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 123 to 124
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.47605514526367
+Used CPU Memory: 26.025455474853516
+Free CPU Memory: 127.99562454223633
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 124 to 125
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.46480560302734
+Used CPU Memory: 26.03679656982422
+Free CPU Memory: 127.89155197143555
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 125 to 126
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.30752182006836
+Used CPU Memory: 26.194141387939453
+Free CPU Memory: 128.13572311401367
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 126 to 127
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.25269317626953
+Used CPU Memory: 26.24924087524414
+Free CPU Memory: 128.1271095275879
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 127 to 128
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.4998435974121
+Used CPU Memory: 26.001754760742188
+Free CPU Memory: 128.21381378173828
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 128 to 129
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.34521102905273
+Used CPU Memory: 26.156204223632812
+Free CPU Memory: 128.4594383239746
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 129 to 130
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.22826766967773
+Used CPU Memory: 26.273258209228516
+Free CPU Memory: 128.10145568847656
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 130 to 131
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.42820739746094
+Used CPU Memory: 26.07331085205078
+Free CPU Memory: 128.1863136291504
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 131 to 132
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.22805404663086
+Used CPU Memory: 26.273799896240234
+Free CPU Memory: 128.09194946289062
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 132 to 133
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.41405868530273
+Used CPU Memory: 26.087783813476562
+Free CPU Memory: 128.0503158569336
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 133 to 134
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.21971130371094
+Used CPU Memory: 26.283241271972656
+Free CPU Memory: 128.00815963745117
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 134 to 135
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.43595504760742
+Used CPU Memory: 26.066150665283203
+Free CPU Memory: 128.25355911254883
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 135 to 136
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.47646713256836
+Used CPU Memory: 26.026187896728516
+Free CPU Memory: 128.60486221313477
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 136 to 137
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.5021095275879
+Used CPU Memory: 26.000980377197266
+Free CPU Memory: 128.84347915649414
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 137 to 138
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.48209381103516
+Used CPU Memory: 26.021278381347656
+Free CPU Memory: 128.65265655517578
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 138 to 139
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.34408950805664
+Used CPU Memory: 26.15731430053711
+Free CPU Memory: 127.5171127319336
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 139 to 140
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.60044479370117
+Used CPU Memory: 25.900836944580078
+Free CPU Memory: 128.3016815185547
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 140 to 141
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.58544921875
+Used CPU Memory: 25.916080474853516
+Free CPU Memory: 128.17007446289062
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 141 to 142
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.45651245117188
+Used CPU Memory: 26.044857025146484
+Free CPU Memory: 127.95458984375
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 142 to 143
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.59689331054688
+Used CPU Memory: 25.9044189453125
+Free CPU Memory: 128.26433944702148
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 143 to 144
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.64803314208984
+Used CPU Memory: 25.854034423828125
+Free CPU Memory: 128.72380828857422
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 144 to 145
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.46480178833008
+Used CPU Memory: 26.03818130493164
+Free CPU Memory: 128.62322235107422
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 145 to 146
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.6683807373047
+Used CPU Memory: 25.834762573242188
+Free CPU Memory: 128.90764999389648
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 146 to 147
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.00475311279297
+Used CPU Memory: 25.49665069580078
+Free CPU Memory: 128.67649459838867
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 147 to 148
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.01777267456055
+Used CPU Memory: 25.483612060546875
+Free CPU Memory: 128.78872680664062
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 148 to 149
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.92341995239258
+Used CPU Memory: 25.5784912109375
+Free CPU Memory: 128.52563858032227
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 149 to 150
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.59986114501953
+Used CPU Memory: 25.8994140625
+Free CPU Memory: 128.21923446655273
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 150 to 151
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.9989356994629
+Used CPU Memory: 25.500598907470703
+Free CPU Memory: 128.68473052978516
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 151 to 152
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.046875
+Used CPU Memory: 25.455520629882812
+Free CPU Memory: 129.07022857666016
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 152 to 153
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.91343307495117
+Used CPU Memory: 25.588821411132812
+Free CPU Memory: 129.18214797973633
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 153 to 154
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.04166412353516
+Used CPU Memory: 25.45989227294922
+Free CPU Memory: 128.59098052978516
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 154 to 155
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.06632614135742
+Used CPU Memory: 25.435035705566406
+Free CPU Memory: 128.8113784790039
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 155 to 156
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.06184005737305
+Used CPU Memory: 25.439666748046875
+Free CPU Memory: 128.77190399169922
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 156 to 157
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.06496047973633
+Used CPU Memory: 25.437023162841797
+Free CPU Memory: 128.79750061035156
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 157 to 158
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.96122360229492
+Used CPU Memory: 25.540576934814453
+Free CPU Memory: 128.6573829650879
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 158 to 159
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.87567901611328
+Used CPU Memory: 25.626026153564453
+Free CPU Memory: 128.42656707763672
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 159 to 160
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.0483627319336
+Used CPU Memory: 25.453144073486328
+Free CPU Memory: 128.64723205566406
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 160 to 161
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.90022659301758
+Used CPU Memory: 25.601165771484375
+Free CPU Memory: 128.64802932739258
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 161 to 162
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.22787857055664
+Used CPU Memory: 26.27027130126953
+Free CPU Memory: 128.16793060302734
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 162 to 163
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.6095314025879
+Used CPU Memory: 25.89117431640625
+Free CPU Memory: 128.7246322631836
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 163 to 164
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.61755752563477
+Used CPU Memory: 25.883487701416016
+Free CPU Memory: 128.7937774658203
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 164 to 165
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.4033317565918
+Used CPU Memory: 26.09746551513672
+Free CPU Memory: 128.48931121826172
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 165 to 166
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.6179428100586
+Used CPU Memory: 25.88353729248047
+Free CPU Memory: 128.78894805908203
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 166 to 167
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.397216796875
+Used CPU Memory: 26.10436248779297
+Free CPU Memory: 128.42285919189453
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 167 to 168
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.59666061401367
+Used CPU Memory: 25.904373168945312
+Free CPU Memory: 128.58357620239258
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 168 to 169
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.57550430297852
+Used CPU Memory: 25.926128387451172
+Free CPU Memory: 128.39313125610352
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 169 to 170
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.58073043823242
+Used CPU Memory: 25.921001434326172
+Free CPU Memory: 128.44253540039062
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 170 to 171
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.38029098510742
+Used CPU Memory: 26.12118911743164
+Free CPU Memory: 128.2731170654297
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 171 to 172
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.69950103759766
+Used CPU Memory: 25.80315399169922
+Free CPU Memory: 129.5305938720703
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 172 to 173
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.9190559387207
+Used CPU Memory: 25.583209991455078
+Free CPU Memory: 128.8595733642578
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 173 to 174
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.8897476196289
+Used CPU Memory: 25.612194061279297
+Free CPU Memory: 128.73164749145508
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 174 to 175
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.91602325439453
+Used CPU Memory: 25.585491180419922
+Free CPU Memory: 128.8479881286621
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 175 to 176
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.72708129882812
+Used CPU Memory: 25.774242401123047
+Free CPU Memory: 128.5371322631836
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 176 to 177
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.9087142944336
+Used CPU Memory: 25.592838287353516
+Free CPU Memory: 128.77650451660156
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 177 to 178
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.8961181640625
+Used CPU Memory: 25.605457305908203
+Free CPU Memory: 128.66242218017578
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 178 to 179
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.89818572998047
+Used CPU Memory: 25.602985382080078
+Free CPU Memory: 128.69981002807617
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 179 to 180
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.67948150634766
+Used CPU Memory: 25.822246551513672
+Free CPU Memory: 128.48654556274414
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 180 to 181
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.75177764892578
+Used CPU Memory: 25.750259399414062
+Free CPU Memory: 128.5190658569336
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 181 to 182
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.57141876220703
+Used CPU Memory: 25.928363800048828
+Free CPU Memory: 128.2316436767578
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 182 to 183
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.8389434814453
+Used CPU Memory: 25.661640167236328
+Free CPU Memory: 129.1518669128418
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 183 to 184
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.62691116333008
+Used CPU Memory: 25.873550415039062
+Free CPU Memory: 128.73672103881836
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 184 to 185
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.82475662231445
+Used CPU Memory: 25.676441192626953
+Free CPU Memory: 129.02864456176758
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 185 to 186
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.63026428222656
+Used CPU Memory: 25.870712280273438
+Free CPU Memory: 128.76117706298828
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 186 to 187
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.7925148010254
+Used CPU Memory: 25.70859146118164
+Free CPU Memory: 128.79733276367188
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 187 to 188
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.91668701171875
+Used CPU Memory: 25.585094451904297
+Free CPU Memory: 129.9104461669922
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 188 to 189
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.72592163085938
+Used CPU Memory: 25.776268005371094
+Free CPU Memory: 129.63289260864258
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 189 to 190
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.91943740844727
+Used CPU Memory: 25.582691192626953
+Free CPU Memory: 129.8934440612793
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 190 to 191
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.43997192382812
+Used CPU Memory: 26.062049865722656
+Free CPU Memory: 128.9055633544922
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 191 to 192
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 145.8991241455078
+Used CPU Memory: 26.603534698486328
+Free CPU Memory: 128.68596649169922
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 192 to 193
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.48963928222656
+Used CPU Memory: 26.012508392333984
+Free CPU Memory: 129.33197402954102
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 193 to 194
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.2558708190918
+Used CPU Memory: 26.24692153930664
+Free CPU Memory: 128.97705841064453
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 194 to 195
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.46812057495117
+Used CPU Memory: 26.03451156616211
+Free CPU Memory: 129.14579010009766
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 195 to 196
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.24397659301758
+Used CPU Memory: 26.258155822753906
+Free CPU Memory: 128.88101959228516
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 196 to 197
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.2291374206543
+Used CPU Memory: 26.27350616455078
+Free CPU Memory: 128.94627380371094
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 197 to 198
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.44161987304688
+Used CPU Memory: 26.060588836669922
+Free CPU Memory: 129.1586151123047
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 198 to 199
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.4699363708496
+Used CPU Memory: 26.03284454345703
+Free CPU Memory: 129.15835189819336
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 199 to 200
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.2490692138672
+Used CPU Memory: 26.253711700439453
+Free CPU Memory: 128.9267807006836
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 200 to 201
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.2796173095703
+Used CPU Memory: 26.22195053100586
+Free CPU Memory: 127.8425178527832
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 201 to 202
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.1750259399414
+Used CPU Memory: 26.32674789428711
+Free CPU Memory: 128.68709564208984
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 202 to 203
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.48397064208984
+Used CPU Memory: 26.018550872802734
+Free CPU Memory: 129.70360946655273
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 203 to 204
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.19225311279297
+Used CPU Memory: 26.308238983154297
+Free CPU Memory: 129.4518699645996
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 204 to 205
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.48969268798828
+Used CPU Memory: 26.013065338134766
+Free CPU Memory: 129.75891494750977
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 205 to 206
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.50534439086914
+Used CPU Memory: 25.99823760986328
+Free CPU Memory: 129.8929901123047
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 206 to 207
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.2179946899414
+Used CPU Memory: 26.284870147705078
+Free CPU Memory: 129.41307067871094
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 207 to 208
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.47008514404297
+Used CPU Memory: 26.03308868408203
+Free CPU Memory: 129.5714874267578
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 208 to 209
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.46611785888672
+Used CPU Memory: 26.037281036376953
+Free CPU Memory: 129.53300094604492
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 209 to 210
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.2548828125
+Used CPU Memory: 26.248760223388672
+Free CPU Memory: 129.36555862426758
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 210 to 211
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.85599899291992
+Used CPU Memory: 25.646881103515625
+Free CPU Memory: 129.1682891845703
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 211 to 212
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.1737403869629
+Used CPU Memory: 25.329666137695312
+Free CPU Memory: 130.2013397216797
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 212 to 213
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.16601181030273
+Used CPU Memory: 25.33690643310547
+Free CPU Memory: 130.13259506225586
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 213 to 214
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.98904418945312
+Used CPU Memory: 25.51413345336914
+Free CPU Memory: 129.85093688964844
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 214 to 215
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.9589080810547
+Used CPU Memory: 25.544178009033203
+Free CPU Memory: 129.88089752197266
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 215 to 216
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.14910125732422
+Used CPU Memory: 25.35397720336914
+Free CPU Memory: 129.9759864807129
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 216 to 217
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.138671875
+Used CPU Memory: 25.36438751220703
+Free CPU Memory: 129.87094116210938
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 217 to 218
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.12493133544922
+Used CPU Memory: 25.37859344482422
+Free CPU Memory: 129.7479248046875
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 218 to 219
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.65460968017578
+Used CPU Memory: 24.848167419433594
+Free CPU Memory: 130.56906509399414
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 219 to 220
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.51844787597656
+Used CPU Memory: 24.98394775390625
+Free CPU Memory: 130.38187789916992
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 220 to 221
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.64826202392578
+Used CPU Memory: 24.854480743408203
+Free CPU Memory: 130.5205078125
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 221 to 222
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.62328338623047
+Used CPU Memory: 24.87923812866211
+Free CPU Memory: 130.27745819091797
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 222 to 223
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.6277961730957
+Used CPU Memory: 24.875125885009766
+Free CPU Memory: 130.3422508239746
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 223 to 224
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.64209365844727
+Used CPU Memory: 24.86063003540039
+Free CPU Memory: 130.4632682800293
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 224 to 225
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.51425170898438
+Used CPU Memory: 25.985626220703125
+Free CPU Memory: 128.46609115600586
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 225 to 226
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.30255126953125
+Used CPU Memory: 26.198894500732422
+Free CPU Memory: 128.73039627075195
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 226 to 227
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.64373779296875
+Used CPU Memory: 25.859066009521484
+Free CPU Memory: 129.61765670776367
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 227 to 228
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.65721893310547
+Used CPU Memory: 25.845256805419922
+Free CPU Memory: 129.74766159057617
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 228 to 229
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.45719146728516
+Used CPU Memory: 26.04541015625
+Free CPU Memory: 129.6268653869629
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 229 to 230
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.6539421081543
+Used CPU Memory: 25.848896026611328
+Free CPU Memory: 129.71785354614258
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 230 to 231
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.64724349975586
+Used CPU Memory: 25.855560302734375
+Free CPU Memory: 129.64325332641602
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 231 to 232
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.43938064575195
+Used CPU Memory: 26.06342315673828
+Free CPU Memory: 129.44669342041016
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 232 to 233
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.64630508422852
+Used CPU Memory: 25.856201171875
+Free CPU Memory: 129.61228942871094
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 233 to 234
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 146.62082290649414
+Used CPU Memory: 25.881675720214844
+Free CPU Memory: 129.38355255126953
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 234 to 235
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.28518676757812
+Used CPU Memory: 25.21725082397461
+Free CPU Memory: 129.73017501831055
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 235 to 236
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.2939682006836
+Used CPU Memory: 25.20856475830078
+Free CPU Memory: 129.80966567993164
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 236 to 237
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.34445571899414
+Used CPU Memory: 25.15853500366211
+Free CPU Memory: 130.27490997314453
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 237 to 238
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.3340835571289
+Used CPU Memory: 25.1690673828125
+Free CPU Memory: 130.194091796875
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 238 to 239
+Total CPU Memory: 187.6310920715332
+Available CPU Memory: 147.4984016418457
+Used CPU Memory: 25.005008697509766
+Free CPU Memory: 130.48624801635742
+Total GPU Memory: 15.78192138671875
+Currently Allocated GPU Memory: 0.07557821273803711
+Processing classes 239 to 240
+Traceback (most recent call last):
+  File "/home/shree_s.iitr/anaconda3/envs/mlrc/lib/python3.9/site-packages/numpy/lib/npyio.py", line 546, in save
+    format.write_array(fid, arr, allow_pickle=allow_pickle,
+  File "/home/shree_s.iitr/anaconda3/envs/mlrc/lib/python3.9/site-packages/numpy/lib/format.py", line 730, in write_array
+    array.tofile(fp)
+OSError: [Errno 122] Disk quota exceeded
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/shree_s.iitr/MLRC-IDGI/script.py", line 107, in <module>
+    np.save(os.path.join(opt.dataroot, "saliencies", opt.model,   f"{opt.method}_ig", f"class_{class_idx:03d}_steps_{n_step}"), salienciency_ig[j][pointer:pointer+class_size])
+  File "/home/shree_s.iitr/anaconda3/envs/mlrc/lib/python3.9/site-packages/numpy/lib/npyio.py", line 546, in save
+    format.write_array(fid, arr, allow_pickle=allow_pickle,
+OSError: [Errno 122] Disk quota exceeded
