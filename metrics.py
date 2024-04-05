@@ -1,0 +1,298 @@
+from PIL import Image
+import io
+import os
+import numpy as np
+
+from pytorch_msssim import MS_SSIM
+import torch
+from torchvision.transforms import ToPILImage
+
+from utils import compute_outputs
+
+from PIL import Image
+from scipy import interpolate
+from typing import Callable, List, NamedTuple, Optional, Sequence, Tuple
+
+def insert_pixels(images, saliency_maps, baselines, pixel_counts):
+    batch_size = images.shape[0]
+    num_channels = images.shape[1]
+
+    # Flatten the saliency maps and sort indices based on attribution scores
+    flattened_indices = torch.argsort(saliency_maps.view(batch_size, -1), dim=1, descending=True)
+
+    # Initialize a blank image for each image in the batch
+    inserted_images = baselines.clone()
+
+    return_items = []
+
+    # Outer loop for inserting pixels
+    for start_idx, end_index in zip(np.concatenate(([0],pixel_counts)), pixel_counts):
+        # Get the current chunk of indices for each image in the batch
+        indices_chunk = flattened_indices[:, start_idx : end_index]
+
+        # Inner loop for inserting pixels for each image in the batch
+        for batch_idx in range(batch_size):
+            # Set the corresponding pixels in the inserted image to the original image
+            for channel_idx in range(num_channels):
+                inserted_images[batch_idx, channel_idx].view(-1)[indices_chunk[batch_idx]] = images[batch_idx, channel_idx].view(-1)[indices_chunk[batch_idx]]
+
+        return_items.append(inserted_images.clone())
+
+    return torch.stack(return_items, dim=1)   #shape is (batch_size, num_percentiles, num_channels, H, W)
+
+def insertion_score(model, saliency_maps, preprocessed_images, baselines, indices, batchSize=64):
+    INSERTION = 0.05
+    # Range of total number of pixels to insert (5% of the total pixels)
+    num_pixels_to_insert = (np.arange(0, 1 + INSERTION, INSERTION)*saliency_maps.shape[-1]*saliency_maps.shape[-2]).astype(int)
+    bokeh_images_list = insert_pixels(preprocessed_images, saliency_maps, baselines, num_pixels_to_insert)
+
+    # Initialize prediction values
+
+    indices = indices.repeat_interleave(bokeh_images_list.shape[1])
+    prediction_values, _ = compute_outputs(model, bokeh_images_list, indices, batchSize=batchSize)
+
+    # Convert the list of prediction values to a tensor
+
+    # Compute the normalized curve
+    normalized_curve = prediction_values / prediction_values[:, -1, None]
+
+    # Compute the area under the curve (AUC)
+    auc_norm = torch.trapz(normalized_curve, dx=INSERTION)
+    auc = torch.trapz(prediction_values, dx=INSERTION)
+
+    return auc_norm, auc
+
+
+def estimate_image_entropy(image: np.ndarray) -> float:
+    """Estimates the amount of information in a given image.
+
+        Args:
+            image: an image, which entropy should be estimated. The dimensions of the
+                array should be [H, W, C] or [H, W] of type uint8.
+        Returns:
+            The estimated amount of information in the image.
+    """
+    buffer = io.BytesIO()
+    pil_image = ToPILImage()(image)
+    pil_image.save(buffer, format='png', lossless=True)
+    buffer.seek(0, os.SEEK_END)
+    length = buffer.tell()
+    buffer.close()
+    return length
+
+ms_ssim_module = MS_SSIM(data_range=1, size_average=False, channel=3)
+def estimate_image_MSSSIM(bokehs: torch.Tensor, original: torch.Tensor) -> float:
+    return ms_ssim_module(bokehs.cuda(), original.cuda()).cpu() #(N,)
+
+class ComputePicMetricError(Exception):
+    """An error that can be raised by the compute_pic_metric(...) method.
+
+    See the method description for more information.
+    """
+    pass
+
+
+class PicMetricResult(NamedTuple):
+    """Holds results of compute_pic_metric(...) method."""
+    # x-axis coordinates of PIC curve data points.
+    curve_x: Sequence[float]
+    # y-axis coordinates of PIC curve data points.
+    curve_y: Sequence[float]
+
+def compute_pic_metric(
+        img: torch.Tensor,
+        pred_probas: torch.Tensor,
+        bokeh_images: torch.Tensor,
+        method="compression",
+        min_pred_value: float = 0.8,
+        keep_monotonous: bool = True,
+        num_data_points: int = 100,
+        entropies=None
+) -> np.ndarray:
+    """Computes Performance Information Curve for a single image.
+
+        The method can be used to compute either Softmax Information Curve (SIC) or
+        Accuracy Information Curve (AIC). The method computes the curve for a single
+        image and saliency map. This method should be called repeatedly on different
+        images and saliency maps.
+
+        Args:
+            img: an original image on which the curve should be computed. The numpy
+                array should have dimensions [H, W, C] for a color image or [H, W]
+                for a grayscale image. The array should be of type uint8.
+            pred_probas: prediction value for each bokeh image
+            bokeh_images: the list of bokeh images generated by insert_pixels
+            method: How to compress the image. The valid values are 'compression' and 'msssim'.
+            min_pred_value: used for filtering images. If the model prediction on the
+                original image is lower than the value of this argument, the method
+                raises ComputePicMetricError to indicate that the image should be
+                skipped. This is done to filter out images that produce low prediction
+                confidence.
+            keep_monotonous: whether to keep the curve monotonically increasing.
+                The value of this argument was set to 'True' in the original paper but
+                setting it to 'False' is a viable alternative.
+            num_data_points: the number of PIC curve data points to return. The number
+                excludes point 1.0 on the x-axis that is always appended to the end.
+                E.g., value 1000 results in 1001 points evently distributed on the
+                x-axis from 0.0 to 1.0 with 0.001 increment.
+
+        Returns:
+            The PIC curve data points and extra auxiliary information. See
+            `PicMetricResult` for more information.
+
+        Raises:
+            ComputePicMetricError:
+                The method raises the error in two cases. That happens in two cases:
+                1. If the model prediction on the original image is not higher than the
+                     model prediction on the completely blurred image.
+                2. If the entropy of the original image is not higher than the entropy
+                     of the completely blurred image.
+                3. If the model prediction on the original image is lower than
+                     `min_pred_value`.
+                If the error is raised, skip the image.
+    """
+    # This list will contain mapping of image entropy for a given saliency
+    # threshold to model prediction.
+    entropy_pred_tuples = []
+
+    # Estimate entropy of the completely blurred image.
+    fully_blurred_img = bokeh_images[0]
+    
+    if method == "compression":
+        if entropies is not None:
+            fully_blurred_img_entropy = entropies[0]
+            original_img_entropy = entropies[-1]
+        else:
+            fully_blurred_img_entropy = estimate_image_entropy(fully_blurred_img)
+            original_img_entropy = estimate_image_entropy(img)
+
+    # Compute model prediction for the original image.
+    original_img_pred = pred_probas[-1]
+
+    if original_img_pred < min_pred_value:
+        message = ('The model prediction score on the original image is lower than'
+                             ' `min_pred_value`. Skip this image or decrease the'
+                             ' value of `min_pred_value` argument. min_pred_value'
+                             ' = {}, the image prediction'
+                             ' = {}.'.format(min_pred_value, original_img_pred))
+        raise ComputePicMetricError(message)
+
+    fully_blurred_img_pred = pred_probas[0]
+
+    # If the score of the model on completely blurred image is higher or equal to
+    # the score of the model on the original image then the metric cannot be used
+    # for this image. Don't include this image in the aggregated result.
+    if fully_blurred_img_pred >= original_img_pred:
+        message = (
+                'The model prediction score on the completely blurred image is not'
+                ' lower than the score on the original image. Catch the error and'
+                ' exclude this image from the evaluation. Blurred score: {}, original'
+                ' score {}'.format(fully_blurred_img_pred, original_img_pred))
+        raise ComputePicMetricError(message)
+
+    # Compute model prediction for the completely blurred image.
+
+    # If the entropy of the completely blurred image is higher or equal to the
+    # entropy of the original image then the metric cannot be used for this
+    # image. Don't include this image in the aggregated result.
+
+    if method=="compression" and fully_blurred_img_entropy >= original_img_entropy:
+        message = (
+                'The entropy in the completely blurred image is not lower than'
+                ' the entropy in the original image. Catch the error and exclude this'
+                ' image from evaluation. Blurred entropy: {}, original'
+                ' entropy {}'.format(fully_blurred_img_entropy, original_img_entropy))
+        raise ComputePicMetricError(message)
+
+    # Iterate through saliency thresholds and compute prediction of the model
+    # for the corresponding blurred images with the saliency pixels revealed.
+
+    if method == "msssim":
+        normalized_mssims = estimate_image_MSSSIM(bokeh_images, img[None, ...].repeat(len(bokeh_images), 1, 1, 1))
+
+    max_normalized_pred = 0.0
+    for i, (bokeh_image, pred) in enumerate(zip(bokeh_images, pred_probas)):
+        if method=="compression":
+            if entropies is not None:
+                entropy = entropies[i]
+            else:
+                entropy = estimate_image_entropy(bokeh_image)
+            # Normalize the values, so they lie in [0, 1] interval.
+            normalized_entropy = (entropy - fully_blurred_img_entropy) / (
+                    original_img_entropy - fully_blurred_img_entropy)
+
+            normalized_entropy = np.clip(normalized_entropy, 0.0, 1.0)
+        else:
+            normalized_entropy = normalized_mssims[i]
+
+        normalized_pred = (pred - fully_blurred_img_pred) / (
+                           original_img_pred - fully_blurred_img_pred)
+        normalized_pred = np.clip(normalized_pred, 0.0, 1.0)
+        max_normalized_pred = max(max_normalized_pred, normalized_pred)
+
+        # Make normalized_pred only grow if keep_monotonous is true.
+        if keep_monotonous:
+            entropy_pred_tuples.append((normalized_entropy, max_normalized_pred))
+        else:
+            entropy_pred_tuples.append((normalized_entropy, normalized_pred))
+
+    # Interpolate the PIC curve.
+    entropy_pred_tuples.append((0.0, 0.0))
+
+    entropy_data, pred_data = zip(*entropy_pred_tuples)
+    interp_func = interpolate.interp1d(x=entropy_data, y=pred_data)
+    
+    curve_x = np.linspace(start=0.0, stop=1.0, num=num_data_points, endpoint=False)
+    curve_y = np.asarray([interp_func(x) for x in curve_x])
+
+    curve_y = np.append(curve_y, 1.0)
+    curve_x = np.append(curve_x, 1.0)
+
+    return curve_y
+
+
+class AggregateMetricResult(NamedTuple):
+    """Holds results of aggregate_individual_pic_results(...) method."""
+    # x-axis coordinates of aggregated PIC curve data points.
+    curve_x: Sequence[float]
+    # y-axis coordinates of aggregated PIC curve data points.
+    curve_y: Sequence[float]
+    # Area under the curve.
+    auc: float
+
+
+def aggregate_individual_pic_results(
+        curve_ys: List[Sequence],
+        method: str = 'median',
+        num_data_points: int = 100) -> AggregateMetricResult:
+    """Aggregates PIC metrics of individual images to produce the aggregate curve.
+
+        The method should be called after calling the compute_pic_metric(...) method
+        on multiple images for a given single saliency method.
+
+        Args:
+            compute_pic_metrics_results: a list of PicMetricResult instances that are
+                obtained by calling compute_pic_metric(...) on multiple images.
+            method: method to use for the aggregation. The valid values are 'mean' and
+                'median'.
+        Returns:
+            AggregateMetricResult - a tuple with x, y coordinates of the curve along
+                with the AUC value.
+
+
+    """
+
+    # Validate that x-axis points for all individual results are the same.
+    curve_x = np.linspace(start=0.0, stop=1.0, num=num_data_points, endpoint=False)
+    curve_x = np.append(curve_x, 1.0)
+
+    if method == 'mean':
+        aggr_curve_y = np.mean(curve_ys, axis=0)
+    elif method == 'median':
+        aggr_curve_y = np.median(curve_ys, axis=0)
+    else:
+        raise ValueError('Unknown method {}.'.format(method))
+
+    auc = np.trapz(aggr_curve_y, curve_x)
+
+    return auc

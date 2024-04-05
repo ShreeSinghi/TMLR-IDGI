@@ -40,6 +40,11 @@ def print_cpu_memory():
     print("Used CPU Memory:", cpu_memory_usage.used/1024/1024/1024)
     print("Free CPU Memory:", cpu_memory_usage.free/1024/1024/1024)
 
+def visualise(image, percentile=99):
+    vmax = np.percentile(image, percentile)
+    vmin = np.min(image)
+
+    return np.clip((image - vmin) / (vmax - vmin), 0, 1)
 
 def split_given_size(a, size):
     return np.split(a, np.arange(size,len(a),size))
@@ -88,7 +93,7 @@ if __name__ == "__main__":
     print_cpu_memory()
     print_gpu_memory()
 
-    for i in tqdm(range(opt.resume_epoch, 1000, CLASS_CLUSTER)): # We are processing 20 classes at a time
+    for i in tqdm(range(opt.resume_epoch, 1000, CLASS_CLUSTER)):
         print("Processing classes", i, "to", i+CLASS_CLUSTER)
         image_paths = []
         indexs = []
@@ -97,24 +102,16 @@ if __name__ == "__main__":
             indexs += [class_idx] * len(class_file_dict[class_idx])
         
         salienciency_ig, salienciency_idgi = integrator.saliency(image_paths, indexs, opt.n_steps, compute_at, batchSize)
-
         pointer = 0
         for class_idx in range(i, i+CLASS_CLUSTER):
             class_size = len(class_file_dict[class_idx])
-            os.makedirs(os.path.join(opt.dataroot, "saliencies", opt.model,   f"{opt.method}_ig"), exist_ok=True)
-            os.makedirs(os.path.join(opt.dataroot, "saliencies", opt.model, f"{opt.method}_idgi"), exist_ok=True)
+
+            os.makedirs("meow", exist_ok=True)
 
             for j, n_step in enumerate(compute_at):
-                a, maxa = compress(salienciency_ig[j][pointer:pointer+class_size].astype(np.float64))
-                b, maxb = compress(salienciency_idgi[j][pointer:pointer+class_size].astype(np.float64))
-                save(a, maxa, os.path.join(opt.dataroot, "saliencies", opt.model,   f"{opt.method}_ig", f"class_{class_idx:03d}_steps_{n_step}"))
-                save(b, maxb, os.path.join(opt.dataroot, "saliencies", opt.model,   f"{opt.method}_idgi", f"class_{class_idx:03d}_steps_{n_step}"))
-
+                np.save(os.path.join(opt.dataroot, "saliencies", opt.model,   f"{opt.method}_ig", f"class_{class_idx:03d}_steps_{n_step}"), salienciency_ig[j][pointer:pointer+class_size].astype(np.float16))
+                np.save(os.path.join(opt.dataroot, "saliencies", opt.model,   f"{opt.method}_idgi", f"class_{class_idx:03d}_steps_{n_step}"), salienciency_idgi[j][pointer:pointer+class_size].astype(np.float16))
             pointer += class_size
-
+                    
         del salienciency_ig, salienciency_idgi
         gc.collect()
-
-        print_cpu_memory()
-        print_gpu_memory()
-

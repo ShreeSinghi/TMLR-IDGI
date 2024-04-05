@@ -9,8 +9,6 @@ from tqdm import tqdm
 import io
 cudnn.benchmark = True
 
-
-
 class IntegratedGradients:
     def __init__(self, model, preprocess, load):
         self.model = model
@@ -31,7 +29,7 @@ class IntegratedGradients:
 
         for i in range(0, input_tensor.shape[0], batchSize):
             # Get the current batch
-            batch = input_tensor[i:i+batchSize].to('cuda:0', non_blocking=True)
+            batch = input_tensor[i:i+batchSize].cuda()
             batch.requires_grad = True
             current_batchSize = len(batch)
             output = torch.nn.Softmax(dim=1)(self.model(batch))
@@ -40,8 +38,8 @@ class IntegratedGradients:
             output = output[torch.arange(output.shape[0]), indices[i:i+current_batchSize]]
 
             # Compute the gradients of the selected outputs with respect to the input
-            gradients[i:i+current_batchSize] = torch.autograd.grad(output, batch, grad_outputs=torch.ones_like(output), retain_graph=True)[0].detach().to('cpu:0', non_blocking=True)
-            outputs[i:i+current_batchSize] = output.detach().to('cpu:0', non_blocking=True)
+            gradients[i:i+current_batchSize] = torch.autograd.grad(output, batch, grad_outputs=torch.ones_like(output), retain_graph=True)[0].detach().cpu()
+            outputs[i:i+current_batchSize] = output.detach().cpu()
 
             del output, batch
             torch.cuda.empty_cache()
@@ -94,8 +92,8 @@ class IntegratedGradients:
             a = (gradients_copy[:,1:] * (sequence_copy[:,1:]-sequence_copy[:,:-1])).sum(1).abs().sum(1).numpy()
             b = (element_product*d.view(batchSize,n-1,1,1,1)/element_product.sum((2,3,4)).view(batchSize,n-1,1,1,1)).sum(1).abs().sum(1).numpy()
 
-            out_ig.append(a/a.sum((1,2), keepdims=True))
-            out_idgi.append(b/b.sum((1,2), keepdims=True))
+            out_ig.append(a)
+            out_idgi.append(b)
 
         del reshaped_sequence, output, gradients, d, element_product, sequence
         torch.cuda.empty_cache()
