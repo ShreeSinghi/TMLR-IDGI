@@ -89,8 +89,8 @@ class IntegratedGradients:
             d = outputs_copy[:, 1:] - outputs_copy[:, :-1]
             element_product = gradients_copy[:,:-1]**2
 
-            a = (gradients_copy[:,1:] * (sequence_copy[:,1:]-sequence_copy[:,:-1])).sum(1).abs().sum(1).numpy()
-            b = (element_product*d.view(batchSize,n-1,1,1,1)/element_product.sum((2,3,4)).view(batchSize,n-1,1,1,1)).sum(1).abs().sum(1).numpy()
+            a = (gradients_copy[:,1:] * (sequence_copy[:,1:]-sequence_copy[:,:-1])).sum((1, 2)).numpy()
+            b = (element_product*d.view(batchSize,n-1,1,1,1)/element_product.sum((2,3,4)).view(batchSize,n-1,1,1,1)).sum((1, 2)).numpy()
 
             out_ig.append(a)
             out_idgi.append(b)
