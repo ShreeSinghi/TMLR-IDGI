@@ -1,9 +1,9 @@
 import argparse
 import os
-import numpy as np
 from PIL import Image
 from tqdm import tqdm
 from PIL import Image, ImageFilter
+
 
 def blur_images(input_dir, output_dir, blur_radius=20):
     os.makedirs(output_dir, exist_ok=True)

@@ -3,7 +3,6 @@ import torch.backends.cudnn as cudnn
 import os
 import numpy as np
 import json
-from PIL import Image
 import gc
 from tqdm import tqdm
 import io

@@ -19,7 +19,7 @@ class BlurIG:
         if sigma == 0:
             return images.cpu()
 
-        size = float(min(2*torch.round(4*sigma)+1, 101))
+        size = float(2*torch.round(4*sigma)+1)
         if sigma not in self.blurrers:
             self.blurrers[sigma] = transforms.GaussianBlur(size, float(sigma)).cuda()
         return self.blurrers[sigma].forward(images).cpu()
