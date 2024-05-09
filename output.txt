@@ -1,0 +1,413 @@
+compilers:
+- compiler:
+    spec: gcc@13.1.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/gcc-13.1.0-rxbwryj3fvqtazpk6xr6ak5actmfvcuy/bin/gcc
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/gcc-13.1.0-rxbwryj3fvqtazpk6xr6ak5actmfvcuy/bin/g++
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/gcc-13.1.0-rxbwryj3fvqtazpk6xr6ak5actmfvcuy/bin/gfortran
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/gcc-13.1.0-rxbwryj3fvqtazpk6xr6ak5actmfvcuy/bin/gfortran
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@12.1.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/gcc-12.1.0-l6by4jknbgoaihvqo5dlo2kddhq5ixqu/bin/gcc
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/gcc-12.1.0-l6by4jknbgoaihvqo5dlo2kddhq5ixqu/bin/g++
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/gcc-12.1.0-l6by4jknbgoaihvqo5dlo2kddhq5ixqu/bin/gfortran
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/gcc-12.1.0-l6by4jknbgoaihvqo5dlo2kddhq5ixqu/bin/gfortran
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@4.8.5
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@11.2.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-11.2.0-yqde46ks5t2vg2szmjvadwjv6uwmmytl/bin/gcc
+      cxx: /home/apps/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-11.2.0-yqde46ks5t2vg2szmjvadwjv6uwmmytl/bin/g++
+      f77: /home/apps/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-11.2.0-yqde46ks5t2vg2szmjvadwjv6uwmmytl/bin/gfortran
+      fc: /home/apps/spack/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-11.2.0-yqde46ks5t2vg2szmjvadwjv6uwmmytl/bin/gfortran
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@10.3.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/gcc-10.3.0-6s5myqx4gznw5jwj6i4nu5dlerkvxk6j/bin/gcc
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/gcc-10.3.0-6s5myqx4gznw5jwj6i4nu5dlerkvxk6j/bin/g++
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/gcc-10.3.0-6s5myqx4gznw5jwj6i4nu5dlerkvxk6j/bin/gfortran
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/gcc-10.3.0-6s5myqx4gznw5jwj6i4nu5dlerkvxk6j/bin/gfortran
+    flags:
+      cflags: ' -g -O0 -fbacktrace '
+      cxxflags: ' -g -O0 -fbacktrace '
+      fflags: ' -g -O0 -fbacktrace '
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: dpcpp@2021.2.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.2.0-dc7udtmucyksbo6ylmde52qsejymlcfd/compiler/2021.2.0/linux/bin/icx
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.2.0-dc7udtmucyksbo6ylmde52qsejymlcfd/compiler/2021.2.0/linux/bin/dpcpp
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.2.0-dc7udtmucyksbo6ylmde52qsejymlcfd/compiler/2021.2.0/linux/bin/ifx
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.2.0-dc7udtmucyksbo6ylmde52qsejymlcfd/compiler/2021.2.0/linux/bin/ifx
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: intel@2021.2.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.2.0-dc7udtmucyksbo6ylmde52qsejymlcfd/compiler/2021.2.0/linux/bin/intel64/icc
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.2.0-dc7udtmucyksbo6ylmde52qsejymlcfd/compiler/2021.2.0/linux/bin/intel64/icpc
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.2.0-dc7udtmucyksbo6ylmde52qsejymlcfd/compiler/2021.2.0/linux/bin/intel64/ifort
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.2.0-dc7udtmucyksbo6ylmde52qsejymlcfd/compiler/2021.2.0/linux/bin/intel64/ifort
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: oneapi@2021.2.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.2.0-dc7udtmucyksbo6ylmde52qsejymlcfd/compiler/2021.2.0/linux/bin/icx
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.2.0-dc7udtmucyksbo6ylmde52qsejymlcfd/compiler/2021.2.0/linux/bin/icpx
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.2.0-dc7udtmucyksbo6ylmde52qsejymlcfd/compiler/2021.2.0/linux/bin/ifx
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.2.0-dc7udtmucyksbo6ylmde52qsejymlcfd/compiler/2021.2.0/linux/bin/ifx
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: dpcpp@2021.4.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.4.0-forrfki5kx4443icsimv6iyig7h3o3tu/compiler/2021.4.0/linux/bin/icx
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.4.0-forrfki5kx4443icsimv6iyig7h3o3tu/compiler/2021.4.0/linux/bin/dpcpp
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.4.0-forrfki5kx4443icsimv6iyig7h3o3tu/compiler/2021.4.0/linux/bin/ifx
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.4.0-forrfki5kx4443icsimv6iyig7h3o3tu/compiler/2021.4.0/linux/bin/ifx
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: intel@2021.4.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.4.0-forrfki5kx4443icsimv6iyig7h3o3tu/compiler/2021.4.0/linux/bin/intel64/icc
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.4.0-forrfki5kx4443icsimv6iyig7h3o3tu/compiler/2021.4.0/linux/bin/intel64/icpc
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.4.0-forrfki5kx4443icsimv6iyig7h3o3tu/compiler/2021.4.0/linux/bin/intel64/ifort
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.4.0-forrfki5kx4443icsimv6iyig7h3o3tu/compiler/2021.4.0/linux/bin/intel64/ifort
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: oneapi@2021.4.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.4.0-forrfki5kx4443icsimv6iyig7h3o3tu/compiler/2021.4.0/linux/bin/icx
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.4.0-forrfki5kx4443icsimv6iyig7h3o3tu/compiler/2021.4.0/linux/bin/icpx
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.4.0-forrfki5kx4443icsimv6iyig7h3o3tu/compiler/2021.4.0/linux/bin/ifx
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/intel-oneapi-compilers-2021.4.0-forrfki5kx4443icsimv6iyig7h3o3tu/compiler/2021.4.0/linux/bin/ifx
+    flags:
+      cflags: -O3 -march=native -ipo  -fp-model fast=2  -qopenmp -xHost
+      cxxflags: -O3 -march=native -ipo  -fp-model fast=2  -qopenmp -xHost
+      fflags: -O3 -march=native -ipo  -fp-model fast=2  -qopenmp -xHost
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@8.5.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/gcc-8.5.0-j6pqwv2z5zpyy2bgqd4jhbfbhhqmstnh/bin/gcc
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/gcc-8.5.0-j6pqwv2z5zpyy2bgqd4jhbfbhhqmstnh/bin/g++
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/gcc-8.5.0-j6pqwv2z5zpyy2bgqd4jhbfbhhqmstnh/bin/gfortran
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-11.2.0/gcc-8.5.0-j6pqwv2z5zpyy2bgqd4jhbfbhhqmstnh/bin/gfortran
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: dpcpp@2022.1.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/intel-oneapi-compilers-2022.1.0-svdppaijlpsx7rtdczs3afjf53tzdj63/compiler/2022.1.0/linux/bin/icx
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/intel-oneapi-compilers-2022.1.0-svdppaijlpsx7rtdczs3afjf53tzdj63/compiler/2022.1.0/linux/bin/dpcpp
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/intel-oneapi-compilers-2022.1.0-svdppaijlpsx7rtdczs3afjf53tzdj63/compiler/2022.1.0/linux/bin/ifx
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/intel-oneapi-compilers-2022.1.0-svdppaijlpsx7rtdczs3afjf53tzdj63/compiler/2022.1.0/linux/bin/ifx
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: intel@2021.6.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/intel-oneapi-compilers-2022.1.0-svdppaijlpsx7rtdczs3afjf53tzdj63/compiler/2022.1.0/linux/bin/intel64/icc
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/intel-oneapi-compilers-2022.1.0-svdppaijlpsx7rtdczs3afjf53tzdj63/compiler/2022.1.0/linux/bin/intel64/icpc
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/intel-oneapi-compilers-2022.1.0-svdppaijlpsx7rtdczs3afjf53tzdj63/compiler/2022.1.0/linux/bin/intel64/ifort
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/intel-oneapi-compilers-2022.1.0-svdppaijlpsx7rtdczs3afjf53tzdj63/compiler/2022.1.0/linux/bin/intel64/ifort
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: oneapi@2022.1.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/intel-oneapi-compilers-2022.1.0-svdppaijlpsx7rtdczs3afjf53tzdj63/compiler/2022.1.0/linux/bin/icx
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/intel-oneapi-compilers-2022.1.0-svdppaijlpsx7rtdczs3afjf53tzdj63/compiler/2022.1.0/linux/bin/icpx
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/intel-oneapi-compilers-2022.1.0-svdppaijlpsx7rtdczs3afjf53tzdj63/compiler/2022.1.0/linux/bin/ifx
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/intel-oneapi-compilers-2022.1.0-svdppaijlpsx7rtdczs3afjf53tzdj63/compiler/2022.1.0/linux/bin/ifx
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: clang@12.0.1
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/llvm-12.0.1-babcuf2yfvlqca7nbscism7elkq65627/bin/clang
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/llvm-12.0.1-babcuf2yfvlqca7nbscism7elkq65627/bin/clang++
+      f77: null
+      fc: null
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@12.2.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/gcc-12.2.0-lef6arr7ytvrhsmb3nqlrb6kveqllsvx/bin/gcc
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/gcc-12.2.0-lef6arr7ytvrhsmb3nqlrb6kveqllsvx/bin/g++
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/gcc-12.2.0-lef6arr7ytvrhsmb3nqlrb6kveqllsvx/bin/gfortran
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.1.0/gcc-12.2.0-lef6arr7ytvrhsmb3nqlrb6kveqllsvx/bin/gfortran
+    flags:
+      cflags: -O3 -mcmodel=large -mtune=native -march=native
+      cxxflags: -O3 -mcmodel=large -mtune=native -march=native
+      fflags: -O3 -mcmodel=large -mtune=native -march=native
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: dpcpp@2022.2.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.0-f2p2ondh5l4dzaezgagc24435qp2zgcf/compiler/2022.2.0/linux/bin/icx
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.0-f2p2ondh5l4dzaezgagc24435qp2zgcf/compiler/2022.2.0/linux/bin/dpcpp
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.0-f2p2ondh5l4dzaezgagc24435qp2zgcf/compiler/2022.2.0/linux/bin/ifx
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.0-f2p2ondh5l4dzaezgagc24435qp2zgcf/compiler/2022.2.0/linux/bin/ifx
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: intel@2021.7.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.0-f2p2ondh5l4dzaezgagc24435qp2zgcf/compiler/2022.2.0/linux/bin/intel64/icc
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.0-f2p2ondh5l4dzaezgagc24435qp2zgcf/compiler/2022.2.0/linux/bin/intel64/icpc
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.0-f2p2ondh5l4dzaezgagc24435qp2zgcf/compiler/2022.2.0/linux/bin/intel64/ifort
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.0-f2p2ondh5l4dzaezgagc24435qp2zgcf/compiler/2022.2.0/linux/bin/intel64/ifort
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: oneapi@2022.2.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.0-f2p2ondh5l4dzaezgagc24435qp2zgcf/compiler/2022.2.0/linux/bin/icx
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.0-f2p2ondh5l4dzaezgagc24435qp2zgcf/compiler/2022.2.0/linux/bin/icpx
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.0-f2p2ondh5l4dzaezgagc24435qp2zgcf/compiler/2022.2.0/linux/bin/ifx
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.0-f2p2ondh5l4dzaezgagc24435qp2zgcf/compiler/2022.2.0/linux/bin/ifx
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: dpcpp@2022.2.1
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.1-qdffndk23tsqricukb5qjckhasnpwsxk/compiler/2022.2.1/linux/bin/icx
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.1-qdffndk23tsqricukb5qjckhasnpwsxk/compiler/2022.2.1/linux/bin/dpcpp
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.1-qdffndk23tsqricukb5qjckhasnpwsxk/compiler/2022.2.1/linux/bin/ifx
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.1-qdffndk23tsqricukb5qjckhasnpwsxk/compiler/2022.2.1/linux/bin/ifx
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: oneapi@2022.2.1
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.1-qdffndk23tsqricukb5qjckhasnpwsxk/compiler/2022.2.1/linux/bin/icx
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.1-qdffndk23tsqricukb5qjckhasnpwsxk/compiler/2022.2.1/linux/bin/icpx
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.1-qdffndk23tsqricukb5qjckhasnpwsxk/compiler/2022.2.1/linux/bin/ifx
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.1-qdffndk23tsqricukb5qjckhasnpwsxk/compiler/2022.2.1/linux/bin/ifx
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: intel@2021.7.1
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.1-qdffndk23tsqricukb5qjckhasnpwsxk/compiler/2022.2.1/linux/bin/intel64/icc
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.1-qdffndk23tsqricukb5qjckhasnpwsxk/compiler/2022.2.1/linux/bin/intel64/icpc
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.1-qdffndk23tsqricukb5qjckhasnpwsxk/compiler/2022.2.1/linux/bin/intel64/ifort
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2022.2.1-qdffndk23tsqricukb5qjckhasnpwsxk/compiler/2022.2.1/linux/bin/intel64/ifort
+    flags:
+      cflags: -ipo -O3 -mcmodel=large -xHost
+      cxxflags: -ipo -O3 -mcmodel=large -xHost
+      fflags: -ipo -O3 -mcmodel=large -xHost
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: nvhpc@22.11
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/nvhpc-22.11-555dvu5sodvxvzjncjyctc27yuc5ekpe/Linux_x86_64/22.11/compilers/bin/nvc
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/nvhpc-22.11-555dvu5sodvxvzjncjyctc27yuc5ekpe/Linux_x86_64/22.11/compilers/bin/nvc++
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/nvhpc-22.11-555dvu5sodvxvzjncjyctc27yuc5ekpe/Linux_x86_64/22.11/compilers/bin/nvfortran
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/nvhpc-22.11-555dvu5sodvxvzjncjyctc27yuc5ekpe/Linux_x86_64/22.11/compilers/bin/nvfortran
+    flags:
+      cflags: -g
+      cxxflags: -g
+      fflags: -g
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: nvhpc@23.11
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.2.0/nvhpc-23.11-dbtl2ttmp4ee62skgznwhjadbtl2s2j5/Linux_x86_64/23.11/compilers/bin/nvc
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.2.0/nvhpc-23.11-dbtl2ttmp4ee62skgznwhjadbtl2s2j5/Linux_x86_64/23.11/compilers/bin/nvc++
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.2.0/nvhpc-23.11-dbtl2ttmp4ee62skgznwhjadbtl2s2j5/Linux_x86_64/23.11/compilers/bin/nvfortran
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.2.0/nvhpc-23.11-dbtl2ttmp4ee62skgznwhjadbtl2s2j5/Linux_x86_64/23.11/compilers/bin/nvfortran
+    flags:
+      cflags: -g
+      cxxflags: -g
+      fflags: -g
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: nvhpc@23.7
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.1.0/nvhpc-23.7-rfytvabu5ydbwztc4qmc6bfvlwh34662/Linux_x86_64/23.7/compilers/bin/nvc
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.1.0/nvhpc-23.7-rfytvabu5ydbwztc4qmc6bfvlwh34662/Linux_x86_64/23.7/compilers/bin/nvc++
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.1.0/nvhpc-23.7-rfytvabu5ydbwztc4qmc6bfvlwh34662/Linux_x86_64/23.7/compilers/bin/nvfortran
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.1.0/nvhpc-23.7-rfytvabu5ydbwztc4qmc6bfvlwh34662/Linux_x86_64/23.7/compilers/bin/nvfortran
+    flags:
+      cflags: -g
+      cxxflags: -g
+      fflags: -g
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: oneapi@2023.2.1
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2023.2.1-tspu5i3ktmz5tiklwgbisqo534sjlyhg/compiler/2023.2.1/linux/bin/icx
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2023.2.1-tspu5i3ktmz5tiklwgbisqo534sjlyhg/compiler/2023.2.1/linux/bin/icpx
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2023.2.1-tspu5i3ktmz5tiklwgbisqo534sjlyhg/compiler/2023.2.1/linux/bin/ifx
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2023.2.1-tspu5i3ktmz5tiklwgbisqo534sjlyhg/compiler/2023.2.1/linux/bin/ifx
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@13.2.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.1.0/gcc-13.2.0-copab5g4qb2y3or7q3rd354ktoubypiq/bin/gcc
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.1.0/gcc-13.2.0-copab5g4qb2y3or7q3rd354ktoubypiq/bin/g++
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.1.0/gcc-13.2.0-copab5g4qb2y3or7q3rd354ktoubypiq/bin/gfortran
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.1.0/gcc-13.2.0-copab5g4qb2y3or7q3rd354ktoubypiq/bin/gfortran
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: oneapi@=2023.0.0
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2023.0.0-ctoyqmpjwgyxem3xybcpbh3uzbwa6ipg/compiler/2023.0.0/linux/bin/icx
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2023.0.0-ctoyqmpjwgyxem3xybcpbh3uzbwa6ipg/compiler/2023.0.0/linux/bin/icpx
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2023.0.0-ctoyqmpjwgyxem3xybcpbh3uzbwa6ipg/compiler/2023.0.0/linux/bin/ifx
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-12.2.0/intel-oneapi-compilers-2023.0.0-ctoyqmpjwgyxem3xybcpbh3uzbwa6ipg/compiler/2023.0.0/linux/bin/ifx
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: oneapi@=2024.0.2
+    paths:
+      cc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.2.0/intel-oneapi-compilers-2024.0.2-ec5rduovhnz6xifsx6lvgjgrzehv5i6x/compiler/2024.0/bin/icx
+      cxx: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.2.0/intel-oneapi-compilers-2024.0.2-ec5rduovhnz6xifsx6lvgjgrzehv5i6x/compiler/2024.0/bin/icpx
+      f77: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.2.0/intel-oneapi-compilers-2024.0.2-ec5rduovhnz6xifsx6lvgjgrzehv5i6x/compiler/2024.0/bin/ifx
+      fc: /home/apps/spack/opt/spack/linux-centos7-cascadelake/gcc-13.2.0/intel-oneapi-compilers-2024.0.2-ec5rduovhnz6xifsx6lvgjgrzehv5i6x/compiler/2024.0/bin/ifx
+    flags:
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+
