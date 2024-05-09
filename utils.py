@@ -1,10 +1,8 @@
 import torch
 import torch.backends.cudnn as cudnn
-import torch.utils.data
 import numpy as np
 from PIL import Image
 from torchvision import models, transforms
-import timm
 import gc
 
 cudnn.benchmark = True
@@ -31,8 +29,6 @@ def load_preprocess (name = "inceptionv3"):
             return images.requires_grad_(True)
         return PreprocessImages
 
-
-
 def load_model(name = "inceptionv3"):
     model = None
     if(name == "resnet50v2"):
@@ -55,8 +51,6 @@ def load_model(name = "inceptionv3"):
         model = models.densenet169(weights='IMAGENET1K_V1').cuda()
     if(name == "densenet201"):
         model = models.densenet201(weights='IMAGENET1K_V1').cuda()
-    if(name == "xception"):
-        model = timm.create_model('xception', pretrained=True).cuda()
 
     model.eval()
     for param in model.parameters():
@@ -95,27 +89,29 @@ def load_image_loader(name = "inceptionv3"):
         return np.asarray([transformer(Image.open(file_path).convert('RGB')) for file_path in file_paths])
     return LoadImages
 
-def compute_outputs(self, input_tensor, indices, batchSize=64):
+def compute_outputs(model, input_tensor, indices, batchSize=64):
     original_shape = input_tensor.shape
-    input_tensor = input_tensor.view(-1, input_tensor.shape[-3:])
+    input_tensor = input_tensor.view(-1, *input_tensor.shape[-3:])
 
     outputs = torch.zeros(input_tensor.shape[0])
+    corrects = torch.zeros(input_tensor.shape[0])
 
     for i in range(0, input_tensor.shape[0], batchSize):
         # Get the current batch
-        batch = input_tensor[i:i+batchSize].to('cuda:0', non_blocking=True)
+        batch = input_tensor[i:i+batchSize].to('cuda:0')
         current_batchSize = len(batch)
         with torch.no_grad():
-            output = torch.nn.Softmax(dim=1)(self.model(batch))
+            output = torch.nn.Softmax(dim=1)(model(batch))
 
         # Select the outputs at the given indices
+        correct = output.argmax(1).cpu() == indices[i:i+current_batchSize]
         output = output[torch.arange(output.shape[0]), indices[i:i+current_batchSize]]
 
         # Compute the gradients of the selected outputs with respect to the input
-        outputs[i:i+current_batchSize] = output.detach().to('cpu:0', non_blocking=True)
+        outputs[i:i+current_batchSize] = output.detach().to('cpu:0')
+        corrects[i:i+current_batchSize] = correct
 
         del output, batch
         torch.cuda.empty_cache()
         gc.collect()
-    input_tensor.requires_grad = False
-    return outputs.detach().reshape(original_shape[:-3])
+    return outputs.detach().view(*original_shape[:-3]), corrects.detach().view(*original_shape[:-3])

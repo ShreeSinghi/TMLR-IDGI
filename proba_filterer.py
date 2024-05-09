@@ -2,6 +2,7 @@ import argparse
 import torch
 import torch.backends.cudnn as cudnn
 import os
+import numpy as np
 import json
 from tqdm import tqdm
 from utils import load_preprocess, load_model, load_image_loader
@@ -54,11 +55,13 @@ if __name__ == "__main__":
     original_files = os.listdir(os.path.join(opt.dataroot, r"val/images"))
     files = [os.path.join(opt.dataroot, r"val/images", file) for file in original_files]
     
-    model = load_model(opt.model)
+    model = load_model(opt.model).cuda()
     preprocess = load_preprocess(opt.model)
     load_image = load_image_loader(opt.model)
 
     predictions = []
+    probas = []
+
     filename_class_dict = create_filename_class_dict()
     index_filename_list = create_index_filename_list(filename_class_dict)
 
@@ -67,20 +70,22 @@ if __name__ == "__main__":
         for batch in tqdm([files[i:i + batchSize] for i in range(0, len(files), batchSize)]):
             batch = preprocess(load_image(batch))
             batch = batch.cuda()
-            result = model(batch)
-            predictions.extend(result.argmax(1).cpu().tolist())
+            result = torch.nn.functional.softmax(model(batch))
+            indexes = result.argmax(1).cpu()
+            probas.extend(result.cpu()[np.arange(len(batch)), indexes].tolist())
+            predictions.extend(indexes.tolist())
             del batch, result
 
-    predictions_index_dict = dict(zip(original_files, predictions))
+    predictions_index_dict = dict(zip(original_files, list(zip(predictions, probas))))
     filename_class_dict = create_filename_class_dict()
     index_filename_list = create_index_filename_list(filename_class_dict)
     
 
     index_file_list = [[] for i in range(1000)]
 
-    for file_name, class_index in tqdm(predictions_index_dict.items()):
-        if file_name in index_filename_list[class_index]:
+    for file_name, (class_index, proba) in tqdm(predictions_index_dict.items()):
+        if file_name in index_filename_list[class_index] and proba > 0.8:
             index_file_list[class_index].append(file_name)
 
-    with open(os.path.join(opt.dataroot, f'{opt.model}_predictions.json'), 'w') as file:
+    with open(os.path.join(opt.dataroot, f'{opt.model}_probas.json'), 'w') as file:
         json.dump(index_file_list, file, indent=4)

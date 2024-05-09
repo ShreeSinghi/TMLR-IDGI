@@ -1,14 +1,8 @@
-import argparse
 import torch.backends.cudnn as cudnn
 import torchvision.transforms as transforms
-import os
 import numpy as np
-import json
-from matplotlib import pyplot as plt
-from PIL import Image
 import gc
-from torchvision import models, transforms
-from tqdm import tqdm
+from torchvision import transforms
 import torch
 import math
 
@@ -19,85 +13,90 @@ class BlurIG:
         self.model = model
         self.load = load
         self.preprocess = preprocess
-    def saliency(self, x_values_paths, prediction_class, steps=20, steps_at=None, batch_size=32, max_sigma = 50, grad_step=0.01, sqrt=False):
-        x_values = self.load(x_values_paths)
-        x_values = x_values*255
+        self.blurrers = dict()
+
+    def gaussian_blur(self, images, sigma):
+        if sigma == 0:
+            return images.cpu()
+
+        size = float(min(2*torch.round(4*sigma)+1, 101))
+        if sigma not in self.blurrers:
+            self.blurrers[sigma] = transforms.GaussianBlur(size, float(sigma)).cuda()
+        return self.blurrers[sigma].forward(images).cpu()
+        
+    def compute_outputs_gradients(self, input_tensor, indices, batchSize=64):
+        gradients = torch.zeros_like(input_tensor)
+        outputs = torch.zeros(input_tensor.shape[0])
+
+        for i in range(0, input_tensor.shape[0], batchSize):
+            # Get the current batch
+            batch = input_tensor[i:i+batchSize].cuda()
+            batch.requires_grad = True
+            current_batchSize = len(batch)
+            output = torch.nn.Softmax(dim=1)(self.model(batch))
+
+            # Select the outputs at the given indices
+            output = output[torch.arange(output.shape[0]), indices[i:i+current_batchSize]]
+
+            # Compute the gradients of the selected outputs with respect to the input
+            gradients[i:i+current_batchSize] = torch.autograd.grad(output, batch, grad_outputs=torch.ones_like(output), retain_graph=True)[0].detach().cpu()
+            outputs[i:i+current_batchSize] = output.detach().cpu()
+
+            del output, batch
+            torch.cuda.empty_cache()
+            gc.collect()
+        input_tensor.requires_grad = False
+        return outputs.detach(), gradients.detach()
+    
+    def saliency(self, image_paths, prediction_class, steps=20, steps_at=None, batch_size=32, max_sigma = 50, grad_step=0.01, sqrt=False):
+        processed_images = self.preprocess(torch.from_numpy(self.load(image_paths))).requires_grad_(False)
         if sqrt:
-            sigmas = [math.sqrt(float(i)*max_sigma/float(steps)) for i in range(0, steps+1)]
+            sigmas = torch.Tensor([math.sqrt(float(i)*max_sigma/float(steps)) for i in range(0, steps+1)])
         else:
-            sigmas = [float(i)*max_sigma/float(steps) for i in range(0, steps+1)]
-        step_vector_diff = [sigmas[i+1] - sigmas[i] for i in range(0, steps)]
+            sigmas = torch.Tensor([float(i)*max_sigma/float(steps) for i in range(0, steps+1)])
+        step_vector_diff = sigmas[1:] - sigmas[:-1]
 
         if steps_at is None:
             steps_at = [steps]
 
-        blurign = torch.zeros((len(steps_at), x_values.shape[0], x_values.shape[1], x_values.shape[2], x_values.shape[3]))
-        blurigidgin = torch.zeros((len(steps_at), x_values.shape[0], x_values.shape[1], x_values.shape[2], x_values.shape[3]))
+        sequence           = torch.zeros((len(processed_images), steps, *processed_images.shape[1:]))
+        gaussian_gradients = torch.zeros((len(processed_images), steps, *processed_images.shape[1:]))
 
-        def gaussian_blur(images, sigma):
-            if sigma == 0:
-                return torch.from_numpy(images).cuda()
-            return transforms.GaussianBlur(2*round(4*sigma)+1, sigma).forward(torch.from_numpy(images).cuda())
+        processed_images = processed_images.cuda()
 
-        def reshape_fortran(x, shape):
-            if len(x.shape) > 0:
-                x = x.permute(*reversed(range(len(x.shape))))
-            return x.reshape(*reversed(shape)).permute(*reversed(range(len(shape))))
+        for i in range(steps):
+            x_step = self.gaussian_blur(processed_images, sigmas[i])
+            gaussian_gradient = (self.gaussian_blur(processed_images, sigmas[i]+grad_step)-x_step)/grad_step
 
-        for k in range(0,x_values.shape[0],batch_size):
-            k1 = k*batch_size
-            k2 = np.min([(k+1)*batch_size, x_values.shape[0]])
-            if (k1 >= k2):
-                break
+            gc.collect()
+            torch.cuda.empty_cache()
 
-            x_value = x_values[k1:k2]
-            x_step_batched = []
-            gaussian_gradient_batched = []
-            gaussian_gradientn = torch.zeros((steps, x_value.shape[0], x_value.shape[1], x_value.shape[2], x_value.shape[3]))
-            gradientsn = torch.zeros((steps, x_value.shape[0], x_value.shape[1], x_value.shape[2], x_value.shape[3]))
-            outputsn = torch.zeros((steps, x_value.shape[0]))
+            gaussian_gradients[:, i] = gaussian_gradient
+            sequence[:, i] = x_step
 
-            for i in range(steps):
-                x_step = gaussian_blur(x_value, sigmas[i])
-                gaussian_gradient = (gaussian_blur(x_value,sigmas[i]+grad_step)-x_step)/grad_step
-                x_step_batched.append(x_step)
-                gaussian_gradient_batched.append(gaussian_gradient)
-                gaussian_gradientn[i] = gaussian_gradient
+        processed_images = processed_images.cpu()
 
-                if len(x_step_batched)*(x_value.shape[0]) >= batch_size or i == steps - 1:
-                    x_step_batched = torch.stack(x_step_batched)
-                    gaussian_gradient_batched = torch.stack(gaussian_gradient_batched)
-                    x_step_batch = torch.reshape(torch.swapaxes(x_step_batched, 0, 1), (x_step_batched.shape[0]*x_step_batched.shape[1], x_step_batched.shape[2], x_step_batched.shape[3], x_step_batched.shape[4]))
-                    x_step_batch = x_step_batch/255
-                    processed = self.preprocess(x_step_batch)
-                    target_class_idx = np.repeat(prediction_class[k1:k2],x_step_batched.shape[0])
-                    output = self.model(processed)
-                    m = torch.nn.Softmax(dim=1)
-                    output = m(output)
-                    outputs = output[torch.arange(x_step_batch.shape[0]),target_class_idx]
-                    gradientsf = torch.autograd.grad(outputs, processed, grad_outputs=torch.ones_like(outputs))[0].detach()
-                    outputs = reshape_fortran(outputs,(x_step_batched.shape[0], x_step_batched.shape[1])).detach()
-                    outputsn[i-x_step_batched.shape[0]+1:i+1] = outputs
-                    gradientsf = reshape_fortran(gradientsf, (x_step_batched.shape[0], x_step_batched.shape[1], x_step_batched.shape[2], x_step_batched.shape[3], x_step_batched.shape[4]))
-                    gradientsn[i-x_step_batched.shape[0]+1:i+1] = gradientsf
-                    del gradientsf, outputs, x_step_batched, x_step_batch, processed, output
+        target_class_idx = np.repeat(prediction_class, steps)
+        outputs, gradients = self.compute_outputs_gradients(sequence.view(-1, *processed_images.shape[1:]), target_class_idx, batchSize=batch_size)
+        outputs = outputs.view(*sequence.shape[:2])
+        gradients = gradients.view(*sequence.shape)
 
-                    torch.cuda.empty_cache()
-                    gc.collect()
 
-                    x_step_batched = []
-                    gaussian_gradient_batched = []
-            for i in range(steps):
-                for j,k in enumerate(steps_at):
-                    if (i%(steps//k) == 0 and i < steps-steps//k):
-                        d = outputsn[i+steps//k]-outputsn[i]
-                        d = torch.reshape(d, (d.shape[0], 1,1,1))
-                        element_product = gradientsn[i]**2
-                        tmpff = d*element_product
-                        tmpfff = torch.sum(element_product, dim = [1,2,3], keepdim = True)
-                        blurigidgin[j][k1:k2] +=tmpff/tmpfff
-                    if (i%(steps//k) == 0):
-                        tmp = np.sum(step_vector_diff[i:i+steps//k])*torch.multiply(gaussian_gradientn[i],gradientsn[i])
-                        blurign[j][k1:k2] += tmp
-        blurign *= -1.0
-        return blurign.numpy(), blurigidgin.numpy()
+        out_ig = []
+        out_idgi = []
+        for n in steps_at:
+            gradients_copy = gradients[:,::steps//n]
+            outputs_copy = outputs[:,::steps//n]
+            gaussian_gradients_copy = gaussian_gradients[:,::steps//n]
+            step_vector_diff_copy = step_vector_diff.reshape(n, steps//n).sum(1).view(1,-1,1,1,1)
+
+            d = outputs_copy[:, 1:] - outputs_copy[:, :-1]
+            element_product = gradients_copy[:,:-1]**2
+                               
+            a = -(step_vector_diff_copy*gaussian_gradients_copy*gradients_copy).sum((1, 2)).numpy()
+            b = -(element_product*d.view(len(processed_images),n-1,1,1,1)/element_product.sum((2,3,4)).view(len(processed_images),n-1,1,1,1)).sum((1,2)).numpy()
+
+            out_ig.append(a)
+            out_idgi.append(b)
+
+        return out_ig, out_idgi

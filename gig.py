@@ -1,24 +1,9 @@
-import random
 import torch
-import torch.nn as nn
-import torch.nn.parallel
 import torch.backends.cudnn as cudnn
-import torch.optim as optim
-import torch.utils.data
-import torchvision.datasets as dset
-import torchvision.utils as vutils
-from torchvision.io import read_image
-from torch.autograd import Variable
-from matplotlib import pylab as P
-import os
 import math
-import PIL.Image
 import numpy as np
-from matplotlib import pyplot as plt
-from PIL import Image
 import gc
-from torchvision import models, transforms
-import timm
+from tqdm import tqdm
 
 cudnn.benchmark = True
 
@@ -86,7 +71,6 @@ class GIG:
         alpha_max = min(alpha + max_dist, 1.0)
 
         for i in range(len(x_all)):
-
           gamma = np.inf
           x = x_all[i]
           x_input = x_input_all[i]
@@ -134,5 +118,6 @@ class GIG:
 
         output_s = out_all.copy()
         grad_s = grad_actual_all.copy()
+	
 
-      return attr_all, result_all
+      return [attr_all.sum(1)], [result_all.sum(1)]
