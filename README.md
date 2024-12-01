@@ -32,3 +32,8 @@ For each model and each attribution method the results need to be evaluated on, 
 4. Run `script_lossy.py` to get the MSE between the original image and compressed image saliencies on the terminal
 5. Run `script_insertion.py` to get the insertion scores in `./results/`
 6. Run `script_pic.py` to get the AUC AIC and AUC SIC scores in `./results/`
+
+#### Credits: 
+
+[Shree Singhi](https://github.com/ShreeSinghi)
+[Anupriya Kumari](https://github.com/anupriyakkumari)
