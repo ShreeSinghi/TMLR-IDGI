@@ -1,5 +1,5 @@
 ## Strengthening Interpretability: An Investigative Study of Integrated Gradient Methods
-This is the official code of [our paper](https://www.arxiv.org/abs/2409.09043), accepted at [TMLR](https://jmlr.org/tmlr/)
+This is the official code for [our paper](https://www.arxiv.org/abs/2409.09043), accepted at [TMLR](https://jmlr.org/tmlr/)
 
 
 ### Description:
