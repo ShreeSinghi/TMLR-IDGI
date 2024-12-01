@@ -1,4 +1,22 @@
-Follow the following steps in order to completely reproduce results of integrated gradient methods:
+## Strengthening Interpretability: An Investigative Study of Integrated Gradient Methods
+This is the official code of [our paper](https://www.arxiv.org/abs/2409.09043), accepted at [TMLR](https://jmlr.org/tmlr/)
+
+
+### Description:
+We conducted a reproducibility study on Integrated Gradients (IG) based methods and the
+Important Direction Gradient Integration (IDGI) framework. IDGI eliminates the expla-
+nation noise in each step of the computation of IG-based methods that use the Riemann
+Integration for integrated gradient computation. We perform a rigorous theoretical analysis
+of IDGI and raise a few critical questions that we later address through our study. We also
+experimentally verify the authors’ claims concerning the performance of IDGI over IG-based
+methods. Additionally, we varied the number of steps used in the Riemann approximation,
+an essential parameter in all IG methods, and analyzed the corresponding change in results.
+We also studied the numerical instability of the attribution methods to check the consistency
+of the saliency maps produced. We developed the complete code to implement IDGI over
+the baseline IG methods and evaluated them using three metrics since the available code
+was insufficient for this study.
+
+### Usage: 
 
 Create a folder `<dataroot>/val/images` and download and place all 50K validation images of ImageNet
 
